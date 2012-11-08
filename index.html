@@ -1,0 +1,220 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Robot Web Tools</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="active"><a href="#about">Home</a></li>
+              <li><a href="#architecture">Architecture</a></li>
+              <li><a href="#tools">Tools</a></li>
+              <li><a href="#tutorials">Tutorials</a></li>
+              <li><a href="#community">Community</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <article id="about">
+      <div class="container">
+        <h2>Welcome to Robot Web Tools</h2>
+        <div class="content">
+          <p class="lead">
+            Robot Web Tools is a collection of open-source modules and tools for
+            building web-based robot apps.
+          </p>
+          <p>
+            Robot Web Tools allows web applications to interface with a variety
+            of robots running middleware like the popular <a
+              href="http://www.ros.org">Robot Operating System</a> (ROS). The <a
+              href="#architecture">Robot Web Architecture</a> section contains a
+            lengthier explanation about ROS and its integration with the web.
+          </p>
+          <p>
+            Check out the <a href="#tools">Tools</a> section for community
+            developer robot web tools like ros.js, the <a
+              href="#tutorials">Tutorials</a> section for guides on getting
+            started, and finally the <a href="#community">Community</a> section
+            for how to get involved or get help.
+          </p>
+        </div>
+      </div>
+    </article>
+    <article id="architecture" >
+      <div class="container">
+        <h2>Robot Web Architecture</h2>
+        <div class="content">
+          <p>
+            A variety of routes are available for architecting a robot web
+            application. A common route is building web technologies on an
+            existing robot framework. The Robot Operating System (ROS) is one of
+            the more popular robot middlewares to build upon.
+          </p>
+          <p>
+            ROS is one of the top frameworks to program robots and can run on a
+            variety of robots, from a <a href="http://turtlebot.com/">TurtleBot</a>
+            to a <a href="http://www.willowgarage.com/pages/pr2/overview">PR2</a> to
+            an Arduino connected to a computer. ROS - and other robot middleware
+            frameworks - provide common robot functionality, including drivers for
+            interfacing with a variety of sensors and actuators and algorithms for
+            navigation, perception, and manipulation.
+          </p>
+          <p>
+            While ROS works great for applications on the robot, another layer
+            is needed to connect external devices and applications, like an
+            Arduino or web app. Rosbridge is both a JSON spec for interacting
+            with ROS and a transport layer, providing a WebSocket for clients to
+            communicate over.
+          </p>
+          <p>
+            In the browser layer sits ros.js, a JavaScript library that
+            communicates with ROS on the robot over rosbridge's WebSocket
+            server. It's a lightweight, evented library that provides a
+            convenient abstraction to core ROS functionality.
+          </p>
+          <p>
+            Ros.js is meant to be a lightweight, core component of the
+            client-side robot web application. However, the real benefits of the
+            Robot Web Tools organization is JavaScript modules and tools that
+            build off these foundations. Check out the <a href="#tools">Tools
+              section</a> for a list of what the community has contributed. And
+            please add your own!
+          </p>
+        </div>
+      </div>
+    </article>
+    <article id="tools">
+      <div class="container">
+        <h2>Tools</h2>
+        <div class="content">
+          <p>
+            Robot Web Tools is a collection of community created tools, from
+            JavaScript modules that interface with ROS or localize in a 2D map to
+            deployment tools.
+          </p>
+          <p>
+            Below is a collection of the current tools contributed to by the
+            community. Feel free to send a pull request and add your own!
+          </p>
+          <ul>
+            <li>
+              <a href="https://github.com/robotwebtools/rosjs">ros.js</a> - Ros.js
+              is the core library for exposing ROS-level functionality. It provides
+              publishing and subscribing to topics, calling services, and listing
+              params.
+            </li>
+            <li>
+              <a
+                href="https://github.com/robotwebtools/rosbridge_suite">rosbridge</a>
+              - Rosbridge is the gateway between ROS and the web. Ros.js
+              communicates with rosbridge, which translates the JSON to ROS
+              commands.
+            </li>
+            <li>
+              <a href="https://github.com/RobotWebTools/actionlibjs">actionlib.js</a>
+              - Actionlib.js behaves as an action client to an <a
+              href="http://www.ros.org/wiki/actionlib">action server</a> running on
+              the server or robot.
+            </li>
+            <li>
+              <a href="https://github.com/RobotWebTools/map2djs">map2d.js</a> - A 2D
+              map of the robot's environment rendered with HTML canvas. Uses ROS'
+              occupancy grid for data.
+            </li>
+            <li>
+              <a
+                href="https://github.com/RobotWebTools/keyboardteleopjs">keyboardteleop.js</a>
+              - Based on keyboard commands, sends direction messages to a robot
+              using ROS' Twist message.
+            </li>
+            <li>
+              <a href="https://github.com/RobotWebTools/nav2djs">nav2d.js</a> - Tell
+              the robot to navigate to a specific point on the map.
+            </li>
+            <li>
+              <a
+                href="https://github.com/RobotWebTools/mjpegcanvasjs">mjpegcanvas.js</a>
+              - Displays video from the robot by displaying the robot's <a
+                href="http://www.ros.org/wiki/mjpeg_server">video stream</a>.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <article id="tutorials">
+      <div class="container">
+        <h2>Tutorials</h2>
+        <div class="content">
+          <p>
+            Luckily, Robot Web Tools is more than just software. There's a great
+            deal of tutorials and documentation contributed by the community, to
+            help get you started, like:
+          </p>
+          <ul>
+            <li>
+              <a href="http://www.ros.org/wiki/ROS/Introduction">Introduction to
+                ROS</a> - While not web specific, ros.org provides a great
+              introduction to the concepts of the Robot Operating System.
+            </li>
+            <li>
+              <a href="http://www.ros.org/wiki/ROS/Tutorials">Programming
+                ROS</a> - This series of tutorials gets you started on creating
+              your own ROS nodes on the robot in C++ or Python. Not necessary
+              for creating a web application, but a great resource to better
+              understand ROS concepts.
+            </li>
+            <li>
+              <a href="http://rosbridge.org/doku.php?id=tutorials:ardrone">AR
+                Drone with ros.js</a> - The tutorial covers how to use rosbridge
+              and ros.js to control an <a href="http://ardrone.com">AR Drone</a>
+              from the web browser.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    <article id="community">
+      <div class="container">
+        <h2>Community</h2>
+        <div class="content">
+          <p>
+            Robotics can be intimidating. The Robot Web Tools community goal is
+            to make robots more accessible to all.  There's a few ways you can
+            get involved or get help:
+          </p>
+          <ul>
+            <li>
+              Ask Questions - We have a <a
+                href="https://groups.google.com/forum/?fromgroups#!forum/robot-web-tools">Robot
+                Web Tools Google Group</a>, frequented by roboticists and web
+              developers. For ROS-specific questions, there's an excellent
+              question and answer site <a
+                href="http://answers.ros.org">answers.ros.org</a>.
+            </li>
+            <li>
+              Submit bugs - Most of the repos are hosted on GitHub or another
+              developer friendly code host. Please submit issues, feature
+              requests, and more. It also helps to explain your use case. Even
+              better, send a pull request with your patch!
+            </li>
+            <li>
+              Add your projects - Robot Web Tools is contributed to by students,
+              hobbyists, and professionals. If you have a module, library, or
+              project you'd like included, just send a pull request to this
+              site.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </article>
+    </div>
+  </body>
+</html>
+

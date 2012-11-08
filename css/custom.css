@@ -1,0 +1,82 @@
+body {
+  padding-top: 40px;
+}
+
+article {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  box-shadow: 1 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+article h2 {
+  text-shadow: 0px 2px rgba(0, 0, 0, 0.3);
+  color: #FFF; /*#F4F8FB;*/
+  margin-left: -30px;
+}
+
+article .content {
+  padding: 30px 70px 30px 70px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.4);
+  background-color: #FFF; /*#F4F8FB;*/
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+#about {
+  background-color: 2F6F99;
+}
+
+#about .content {
+  /* background-color: EBF2FF; */
+}
+
+#about h2 {
+  /* color: #ddd; */
+}
+
+#architecture {
+  background-color: F84A4A;
+}
+
+#architecture .content {
+  /* background-color: EBF2FF; */
+}
+
+#architecture h2 {
+  /* color: FFA742; */
+}
+
+#tools {
+  background-color: F87B4A;
+}
+
+#tools .content {
+  /* background-color: EBF2FF; */
+}
+
+#tools h2 {
+  /* color: 774F38; */
+}
+
+#tutorials {
+  background-color: F8A14A;
+}
+
+#tutorials .content {
+  /* background-color: EBF2FF; */
+}
+
+#tutorials h2 {
+  /* color: C72309; */
+}
+
+#community {
+  background-color: F8CF4A;
+}
+
+#community .content {
+  /* background-color: EBF2FF; */
+}
