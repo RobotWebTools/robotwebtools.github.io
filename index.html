@@ -19,6 +19,21 @@
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/style-desktop.css" />
 </noscript>
+<script>
+  (function(i, s, o, g, r, a, m) {
+    i['GoogleAnalyticsObject'] = r;
+    i[r] = i[r] || function() {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    m.parentNode.insertBefore(a, m)
+  })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+  ga('create', 'UA-39765480-1', 'robotwebtools.org');
+  ga('send', 'pageview');
+</script>
 <!--[if lte IE 9]><link rel="stylesheet" href="css/ie9.css" /><![endif]-->
 <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 <!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
@@ -43,22 +58,28 @@
               <!-- Nav -->
               <nav id="nav" class="mobileUI-site-nav">
                 <ul>
-                  <li class="current_page_item"><a href="index.html">Home</a></li>
+                  <li class="current_page_item"><a href="index.html">Home</a>
+                  </li>
                   <li><a href="" class="arrow">Tools</a>
                     <ul>
-                      <li><a href="#">Libraries</a></li>
-                      <li><a href="#">Widgets</a></li>
-                    </ul>
-                  </li>
+                      <li><a href="#">Libraries</a>
+                      </li>
+                      <li><a href="#">Widgets</a>
+                      </li>
+                    </ul></li>
                   <li><a href="demos.html" class="arrow">Demos</a>
                     <ul>
-                      <li><a href="demos.html#roslibjs">roslibjs</a></li>
-                      <li><a href="demos.html#ros2djs">ros2djs</a></li>
-                      <li><a href="demos.html#ros3djs">ros3djs</a></li>
-                    </ul>
+                      <li><a href="demos.html#roslibjs">roslibjs</a>
+                      </li>
+                      <li><a href="demos.html#ros2djs">ros2djs</a>
+                      </li>
+                      <li><a href="demos.html#ros3djs">ros3djs</a>
+                      </li>
+                    </ul></li>
+                  <li><a href="#">News</a>
                   </li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Community</a></li>
+                  <li><a href="#">Community</a>
+                  </li>
                 </ul>
               </nav>
 
@@ -72,7 +93,7 @@
               building web-based robot apps.
             </h2>
             <p>Want to see Robot Web Tools in action?</p>
-            <a href="#" class="button button-big button-icon button-icon-check">View Demos</a>
+            <a href="demos.html" class="button button-big button-icon button-icon-check">View Demos</a>
           </div>
 
         </div>
@@ -313,16 +334,24 @@
           <section>
             <h2>Resources</h2>
             <ul class="style2">
-              <li><a href="http://www.ros.org/wiki/ROS/">Robot Operating System (ROS)</a></li>
-              <li><a href="http://www.ros.org/wiki/ROS/Introduction">Introduction to ROS</a></li>
-              <li><a href="http://www.ros.org/wiki/ROS/Tutorials">ROS Tutorials</a></li>
+              <li><a href="http://www.ros.org/wiki/ROS/">Robot Operating System (ROS)</a>
+              </li>
+              <li><a href="http://www.ros.org/wiki/ROS/Introduction">Introduction to ROS</a>
+              </li>
+              <li><a href="http://www.ros.org/wiki/ROS/Tutorials">ROS Tutorials</a>
+              </li>
               <li><a href="http://ros.org/wiki/rosjs/Tutorials/turtlesimjs">roslibjs
-                  TurtleSim Tutorial</a></li>
+                  TurtleSim Tutorial</a>
+              </li>
               <li><a href="http://rosbridge.org/doku.php?id=tutorials:ardrone">AR.Drone
-                  Tutorial</a></li>
-              <li><a href="https://github.com/RobotWebTools/roslibjs">roslibjs @ github</a></li>
-              <li><a href="https://github.com/RobotWebTools/ros2djs">ros2djs @ github</a></li>
-              <li><a href="https://github.com/RobotWebTools/ros3djs">ros3djs @ github</a></li>
+                  Tutorial</a>
+              </li>
+              <li><a href="https://github.com/RobotWebTools/roslibjs">roslibjs @ github</a>
+              </li>
+              <li><a href="https://github.com/RobotWebTools/ros2djs">ros2djs @ github</a>
+              </li>
+              <li><a href="https://github.com/RobotWebTools/ros3djs">ros3djs @ github</a>
+              </li>
             </ul>
           </section>
 
@@ -333,11 +362,17 @@
           <section>
             <h2>Sponsors</h2>
             <ul class="style2">
-              <li><a href="http://web.cs.wpi.edu/~rail/">Worcester Polytechnic Institute</a></li>
-              <li><a href="http://robotics.cs.brown.edu/">Brown University</a></li>
-              <li><a href="https://willowgarage.com/">Willow Garage, Inc.</a></li>
-              <li><a href="http://yujinrobot.com/">Yujin Robot</a></li>
-              <li><a href="http://www.bosch.us/content/language1/html/index.htm">Robert Bosch, LLC</a></li>
+              <li><a href="http://web.cs.wpi.edu/~rail/">Worcester Polytechnic Institute</a>
+              </li>
+              <li><a href="http://robotics.cs.brown.edu/">Brown University</a>
+              </li>
+              <li><a href="https://willowgarage.com/">Willow Garage, Inc.</a>
+              </li>
+              <li><a href="http://yujinrobot.com/">Yujin Robot</a>
+              </li>
+              <li><a href="http://www.bosch.us/content/language1/html/index.htm">Robert
+                  Bosch, LLC</a>
+              </li>
             </ul>
           </section>
 
