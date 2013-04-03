@@ -25,33 +25,33 @@
 <script type="text/javascript" type="text/javascript">
   function init() {
     var ros = new ROSLIB.Ros({
-      url : 'ws://demo1.robotwebtools.org:9090'
+      url : 'ws://demo2.robotwebtools.org:9090'
     });
 
     var viewer = new ROS3D.Viewer({
-      divID : 'markers',
+      divID : 'urdf',
       width : window.innerWidth,
       height : window.innerHeight,
       antialias : true
     });
+    viewer.addObject(new ROS3D.Grid());
 
-    new ROS3D.InteractiveMarkerClient({
+    new ROS3D.UrdfClient({
       ros : ros,
       tfClient : new ROSLIB.TFClient({
         ros : ros,
         angularThres : 0.01,
         transThres : 0.01,
         rate : 10.0,
-        fixedFrame : '/rotating_frame'
+        fixedFrame : '/world'
       }),
-      topic : '/basic_controls',
-      camera : viewer.camera,
-      rootObject : viewer.selectableObjects
+      path : 'http://resources.robotwebtools.org/',
+      rootObject : viewer.scene
     });
   }
 </script>
 </head>
 <body onload="init()">
-  <div id="markers"></div>
+  <div id="urdf"></div>
 </body>
 </html>
