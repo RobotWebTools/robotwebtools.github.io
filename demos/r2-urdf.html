@@ -27,7 +27,7 @@
 <script type="text/javascript">
   function init() {
     var ros = new ROSLIB.Ros({
-      url : 'ws://demo1.robotwebtools.org:9090'
+      url : 'ws://demo2.robotwebtools.org:9090'
     });
 
     var viewer = new ROS3D.Viewer({
@@ -44,7 +44,8 @@
         ros : ros,
         angularThres : 0.01,
         transThres : 0.01,
-        rate : 10.0
+        rate : 10.0,
+        fixedFrame : '/world'
       }),
       path : 'http://resources.robotwebtools.org/',
       rootObject : viewer.scene

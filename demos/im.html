@@ -22,7 +22,7 @@
   ga('create', 'UA-39765480-1', 'robotwebtools.org');
   ga('send', 'pageview');
 </script>
-<script type="text/javascript" type="text/javascript">
+<script type="text/javascript">
   function init() {
     var ros = new ROSLIB.Ros({
       url : 'ws://demo1.robotwebtools.org:9090'
@@ -42,7 +42,7 @@
         angularThres : 0.01,
         transThres : 0.01,
         rate : 10.0,
-        fixed_frame : '/rotating_frame'
+        fixedFrame : '/rotating_frame'
       }),
       topic : '/basic_controls',
       camera : viewer.camera,
