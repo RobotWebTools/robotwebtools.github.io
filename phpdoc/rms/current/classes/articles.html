@@ -1,0 +1,323 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \articles</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/api.html"><i class="icon-folder-open"></i> api</a></li>
+<li><a href="../packages/css.html"><i class="icon-folder-open"></i> css</a></li>
+<li><a href="../packages/img.html"><i class="icon-folder-open"></i> img</a></li>
+<li><a href="../packages/inc.html"><i class="icon-folder-open"></i> inc</a></li>
+<li><a href="../packages/js.html"><i class="icon-folder-open"></i> js</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">0</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list"><li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_create_article" title="create_article :: Create an article with the given information."><span class="description">Create an article with the given information.</span><pre>create_article()</pre></a></li>
+<li class="method public "><a href="#method_create_article_html" title="create_article_html :: Get the HTML for creating the given article."><span class="description">Get the HTML for creating the given article.</span><pre>create_article_html()</pre></a></li>
+<li class="method public "><a href="#method_create_page_articles_html" title="create_page_articles_html :: Get the HTML for creating the article section for the given page."><span class="description">Get the HTML for creating the article section for the given page.</span><pre>create_page_articles_html()</pre></a></li>
+<li class="method public "><a href="#method_delete_article_by_id" title="delete_article_by_id :: Delete the article array for the article with the given ID."><span class="description">Delete the article array for the article with the given ID.</span><pre>delete_article_by_id()</pre></a></li>
+<li class="method public "><a href="#method_get_article_by_id" title="get_article_by_id :: Get the content article array for the article with the given ID, or null
+if none exist."><span class="description">Get the content article array for the article with the given ID, or null
+if none exist.</span><pre>get_article_by_id()</pre></a></li>
+<li class="method public "><a href="#method_get_article_by_title_and_pageid" title="get_article_by_title_and_pageid :: Get the content article array for the article with the given title on the
+given page, or null if none exist."><span class="description">Get the content article array for the article with the given title on the
+given page, or null if none exist.</span><pre>get_article_by_title_and_pageid()</pre></a></li>
+<li class="method public "><a href="#method_get_article_editor" title="get_article_editor :: Get the HTML for an editor used to create or edit the given article
+entry."><span class="description">Get the HTML for an editor used to create or edit the given article
+entry.</span><pre>get_article_editor()</pre></a></li>
+<li class="method public "><a href="#method_get_articles" title="get_articles :: Get all content article entries in the database or null if none exist."><span class="description">Get all content article entries in the database or null if none exist.</span><pre>get_articles()</pre></a></li>
+<li class="method public "><a href="#method_get_articles_by_pageid" title="get_articles_by_pageid :: Get all content articles for the page with the given ID, or null if none
+exist."><span class="description">Get all content articles for the page with the given ID, or null if none
+exist.</span><pre>get_articles_by_pageid()</pre></a></li>
+<li class="method public "><a href="#method_update_article" title="update_article :: Update an article with the given information inside of the array."><span class="description">Update an article with the given information inside of the array.</span><pre>update_article()</pre></a></li>
+<li class="method public "><a href="#method_valid_article_fields" title="valid_article_fields :: Check if the given array has all of the necessary fields to create an
+article."><span class="description">Check if the given array has all of the necessary fields to create an
+article.</span><pre>valid_article_fields()</pre></a></li>
+</ul>
+</li></ul>
+</div>
+<div class="span8">
+<a id="\articles"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/articles.html">articles</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">A static class to contain the articles.inc.php static functions.</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:rctoris@wpi.edu">Russell Toris</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>2013 Russell Toris, Worcester Polytechnic Institute</td>
+</tr>
+<tr>
+<th>license</th>
+<td><a href="">BSD -- see LICENSE file</a></td>
+</tr>
+<tr>
+<th>version</th>
+<td>April, 12 2013</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/api.content.articles.html">api.content.articles</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_create_article"></a><div class="element clickable method public method_create_article" data-toggle="collapse" data-target=".method_create_article .collapse">
+<h2>Create an article with the given information.</h2>
+<pre>create_article(string $title, string $content, integer $pageid, integer $index) : string | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Any errors are returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$title</h4>
+<code>string</code><p>The title of the article</p></div>
+<div class="subelement argument">
+<h4>$content</h4>
+<code>string</code><p>The HTML of the article's content</p>
+</div>
+<div class="subelement argument">
+<h4>$pageid</h4>
+<code>integer</code><p>The ID number of the page this article belongs to</p></div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code><p>The index on the page for this article</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>An error message or null if the create was sucessful</div>
+</div></div>
+</div>
+<a id="method_create_article_html"></a><div class="element clickable method public method_create_article_html" data-toggle="collapse" data-target=".method_create_article_html .collapse">
+<h2>Get the HTML for creating the given article.</h2>
+<pre>create_article_html(array $article) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$article</h4>
+<code>array</code><p>The article SQL entry to generate HTML for</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The HTML for the article</div>
+</div></div>
+</div>
+<a id="method_create_page_articles_html"></a><div class="element clickable method public method_create_page_articles_html" data-toggle="collapse" data-target=".method_create_page_articles_html .collapse">
+<h2>Get the HTML for creating the article section for the given page.</h2>
+<pre>create_page_articles_html(array $page) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$page</h4>
+<code>array</code><p>The content page SQL entry to generate HTML for</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The HTML for the article section for the given page</div>
+</div></div>
+</div>
+<a id="method_delete_article_by_id"></a><div class="element clickable method public method_delete_article_by_id" data-toggle="collapse" data-target=".method_delete_article_by_id .collapse">
+<h2>Delete the article array for the article with the given ID.</h2>
+<pre>delete_article_by_id(integer $id) : string | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Any errors
+are returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code><p>The article ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>an error message or null if the delete was sucessful</div>
+</div></div>
+</div>
+<a id="method_get_article_by_id"></a><div class="element clickable method public method_get_article_by_id" data-toggle="collapse" data-target=".method_get_article_by_id .collapse">
+<h2>Get the content article array for the article with the given ID, or null
+if none exist.</h2>
+<pre>get_article_by_id(integer $id) : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code><p>The article ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>An array of the article's SQL entry or null if none
+    exist</div>
+</div></div>
+</div>
+<a id="method_get_article_by_title_and_pageid"></a><div class="element clickable method public method_get_article_by_title_and_pageid" data-toggle="collapse" data-target=".method_get_article_by_title_and_pageid .collapse">
+<h2>Get the content article array for the article with the given title on the
+given page, or null if none exist.</h2>
+<pre>get_article_by_title_and_pageid(string $title, integer $pageid) : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$title</h4>
+<code>string</code><p>The article title</p></div>
+<div class="subelement argument">
+<h4>$pageid</h4>
+<code>integer</code><p>The page ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>An array of the article's SQL entry or null if none
+    exist</div>
+</div></div>
+</div>
+<a id="method_get_article_editor"></a><div class="element clickable method public method_get_article_editor" data-toggle="collapse" data-target=".method_get_article_editor .collapse">
+<h2>Get the HTML for an editor used to create or edit the given article
+entry.</h2>
+<pre>get_article_editor(integer | null $id) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If this is not an edit, null can be given as the ID. An invalid ID
+is the same as giving a null ID.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code><code>null</code><p>the ID of the article to edit, or null if a new
+    entry is being made</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>A string containing the HTML of the editor</div>
+</div></div>
+</div>
+<a id="method_get_articles"></a><div class="element clickable method public method_get_articles" data-toggle="collapse" data-target=".method_get_articles .collapse">
+<h2>Get all content article entries in the database or null if none exist.</h2>
+<pre>get_articles() : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>All content articles in the database or null if none
+    exist</div>
+</div></div>
+</div>
+<a id="method_get_articles_by_pageid"></a><div class="element clickable method public method_get_articles_by_pageid" data-toggle="collapse" data-target=".method_get_articles_by_pageid .collapse">
+<h2>Get all content articles for the page with the given ID, or null if none
+exist.</h2>
+<pre>get_articles_by_pageid(integer $pageid) : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$pageid</h4>
+<code>integer</code><p>The page ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>An array of the page's articles or null if none exist</div>
+</div></div>
+</div>
+<a id="method_update_article"></a><div class="element clickable method public method_update_article" data-toggle="collapse" data-target=".method_update_article .collapse">
+<h2>Update an article with the given information inside of the array.</h2>
+<pre>update_article(array $fields) : string | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The
+array should be indexed by the SQL column names. The ID field must be
+contained inside of the array with the index 'id'. Any errors are
+returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$fields</h4>
+<code>array</code><p>the fields to update including the article ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>an error message or null if the update was sucessful</div>
+</div></div>
+</div>
+<a id="method_valid_article_fields"></a><div class="element clickable method public method_valid_article_fields" data-toggle="collapse" data-target=".method_valid_article_fields .collapse">
+<h2>Check if the given array has all of the necessary fields to create an
+article.</h2>
+<pre>valid_article_fields(array $array) : boolean</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$array</h4>
+<code>array</code><p>The array to check</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>If the given array has all of the necessary fields to
+    create a new article</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-04-16T13:14:58-07:00.<br></footer></div>
+</div>
+</body>
+</html>
