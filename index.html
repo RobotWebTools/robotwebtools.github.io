@@ -64,21 +64,21 @@
               <nav id="nav" class="mobileUI-site-nav">
                 <ul>
                   <li class="current_page_item"><a href="index.html">Home</a></li>
-                  <li><a href="" class="arrow">Tools</a>
+                  <li><a href="tools.html" class="arrow">Tools</a>
                     <ul>
-                      <li><a href="#">Libraries</a></li>
-                      <li><a href="#">Widgets</a></li>
+                      <li><a href="tools.html#libraries">Libraries</a></li>
+                      <li><a href="tools.html#widgets">Widgets</a></li>
                     </ul>
                   </li>
                   <li><a href="demos.html" class="arrow">Demos</a>
                     <ul>
-                      <li><a href="demos.html#roslibjs">roslibjs</a></li>
-                      <li><a href="demos.html#ros2djs">ros2djs</a></li>
                       <li><a href="demos.html#ros3djs">ros3djs</a></li>
+                      <li><a href="demos.html#ros2djs">ros2djs</a></li>
+                      <li><a href="demos.html#roslibjs">roslibjs</a></li>
                     </ul>
                   </li>
-                  <li><a href="#">News</a></li>
-                  <li><a href="#">Community</a></li>
+                  <li><a href="news.html">News</a></li>
+                  <li><a href="community.html">Community</a></li>
                 </ul>
               </nav>
 
@@ -192,18 +192,20 @@
                 <p>
                   While ROS works great for applications on the robot, another layer is needed to
                   connect external devices and applications. <a href="http://www.rosbridge.org/">
-                    rosbridge</a> is both a JSON spec for interacting with ROS and a transport layer,
+                  rosbridge</a> is both a JSON spec for interacting with ROS and a transport layer,
                   providing a WebSocket for clients to communicate over.
                 </p>
                 <p>
-                  In the browser layer sits the core JavaScript libraries: <a href="#">roslibjs</a>,
-                  <a href="#">ros2js</a>, and <a href="#">ros3djs</a>. These libraries communicate
-                  with ROS on the robot over rosbridge's WebSocket server. It's a lightweight,
+                  In the browser layer sits the core JavaScript libraries: 
+                  <a href="https://github.com/RobotWebTools/roslibjs">roslibjs</a>,
+                  <a href="https://github.com/RobotWebTools/ros2djs">ros2js</a>, and
+                  <a href="https://github.com/RobotWebTools/ros3djs">ros3djs</a>. These libraries 
+                  communicate with ROS on the robot over rosbridge's WebSocket server. It's a lightweight,
                   evented library that provides a convenient abstraction to core ROS functionality.
                 </p>
                 <p>
                   The real benefits of the Robot Web Tools organization is JavaScript modules and
-                  tools that build off these foundations. Check out the <a href="#">Tools</a>
+                  tools that build off these foundations. Check out the <a href="tools.html">Tools</a>
                   section for a list of what the community has contributed. And please <a
                     href="https://github.com/RobotWebTools/robotwebtools.github.com/">add your
                     own</a>!
@@ -274,10 +276,13 @@
                     </header>
                     <p>
                       The core functionality of the Robot Web Tools JavaScript tools are being
-                      broken up into three libraries. <a href="#">roslibjs</a> will be responsible
-                      for the core communication to ROS via rosbridge, <a href="#">ros2djs</a> will
-                      contain modules for creating 2D visualization widgets, and <a href="#">ros3djs</a>
-                      will contain modules for creating 3D visualization widgets.
+                      broken up into three libraries.
+                      <a href="https://github.com/RobotWebTools/roslibjs">roslibjs</a> will be responsible
+                      for the core communication to ROS via rosbridge,
+                      <a href="https://github.com/RobotWebTools/ros2djs">ros2djs</a> will
+                      contain modules for creating 2D visualization widgets, and
+                      <a href="https://github.com/RobotWebTools/ros3djs">ros3djs</a> will 
+                      contain modules for creating 3D visualization widgets.
                     </p>
                   </div>
                 </article>
