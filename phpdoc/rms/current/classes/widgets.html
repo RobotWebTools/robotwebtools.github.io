@@ -1,0 +1,453 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \widgets</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/api.html"><i class="icon-folder-open"></i> api</a></li>
+<li><a href="../packages/css.html"><i class="icon-folder-open"></i> css</a></li>
+<li><a href="../packages/img.html"><i class="icon-folder-open"></i> img</a></li>
+<li><a href="../packages/inc.html"><i class="icon-folder-open"></i> inc</a></li>
+<li><a href="../packages/js.html"><i class="icon-folder-open"></i> js</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">0</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list"><li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_create_widget" title="create_widget :: Create a widget with the given information."><span class="description">Create a widget with the given information.</span><pre>create_widget()</pre></a></li>
+<li class="method public "><a href="#method_create_widget_instance" title="create_widget_instance :: Create a widget instance with the given information."><span class="description">Create a widget instance with the given information.</span><pre>create_widget_instance()</pre></a></li>
+<li class="method public "><a href="#method_delete_widget_by_id" title="delete_widget_by_id :: Delete the widget array for the widget with the given ID."><span class="description">Delete the widget array for the widget with the given ID.</span><pre>delete_widget_by_id()</pre></a></li>
+<li class="method public "><a href="#method_delete_widget_instance_by_widgetid_and_id" title="delete_widget_instance_by_widgetid_and_id :: Delete the widget instance array for the widget with the given IDs."><span class="description">Delete the widget instance array for the widget with the given IDs.</span><pre>delete_widget_instance_by_widgetid_and_id()</pre></a></li>
+<li class="method public "><a href="#method_get_unused_widget_tables" title="get_unused_widget_tables :: Get an array of all the unused widget SQL tables or null if none exist."><span class="description">Get an array of all the unused widget SQL tables or null if none exist.</span><pre>get_unused_widget_tables()</pre></a></li>
+<li class="method public "><a href="#method_get_widget_by_id" title="get_widget_by_id :: Get the widget array for the widget with the given ID, or null if none
+exist."><span class="description">Get the widget array for the widget with the given ID, or null if none
+exist.</span><pre>get_widget_by_id()</pre></a></li>
+<li class="method public "><a href="#method_get_widget_by_table" title="get_widget_by_table :: Get the widget array for the widget with the given SQL table, or null if
+none exist."><span class="description">Get the widget array for the widget with the given SQL table, or null if
+none exist.</span><pre>get_widget_by_table()</pre></a></li>
+<li class="method public "><a href="#method_get_widget_editor" title="get_widget_editor :: Get the HTML for an editor used to create or edit the given widget entry."><span class="description">Get the HTML for an editor used to create or edit the given widget entry.</span><pre>get_widget_editor()</pre></a></li>
+<li class="method public "><a href="#method_get_widget_instance_by_widgetid_and_id" title="get_widget_instance_by_widgetid_and_id :: Get the widget instance array for the widget with the given IDs, or null
+if none exist."><span class="description">Get the widget instance array for the widget with the given IDs, or null
+if none exist.</span><pre>get_widget_instance_by_widgetid_and_id()</pre></a></li>
+<li class="method public "><a href="#method_get_widget_instance_editor_by_widgetid" title="get_widget_instance_editor_by_widgetid :: Get the HTML for an editor used to create or edit the given widget
+instance entry."><span class="description">Get the HTML for an editor used to create or edit the given widget
+instance entry.</span><pre>get_widget_instance_editor_by_widgetid()</pre></a></li>
+<li class="method public "><a href="#method_get_widget_instances_by_widgetid" title="get_widget_instances_by_widgetid :: Get an array of the instances of the given widget, or null if none exist."><span class="description">Get an array of the instances of the given widget, or null if none exist.</span><pre>get_widget_instances_by_widgetid()</pre></a></li>
+<li class="method public "><a href="#method_get_widget_instances_by_widgetid_and_envid" title="get_widget_instances_by_widgetid_and_envid :: Get an array of the instances of the given widget for the given
+environment, or null if none exist."><span class="description">Get an array of the instances of the given widget for the given
+environment, or null if none exist.</span><pre>get_widget_instances_by_widgetid_and_envid()</pre></a></li>
+<li class="method public "><a href="#method_get_widget_table_columns_by_id" title="get_widget_table_columns_by_id :: Get the column names in the MySQL table for the widget with the given ID,
+or null if none exist."><span class="description">Get the column names in the MySQL table for the widget with the given ID,
+or null if none exist.</span><pre>get_widget_table_columns_by_id()</pre></a></li>
+<li class="method public "><a href="#method_get_widgets" title="get_widgets :: Get an array of all the widget entries, or null if none exist."><span class="description">Get an array of all the widget entries, or null if none exist.</span><pre>get_widgets()</pre></a></li>
+<li class="method public "><a href="#method_update_widget" title="update_widget :: Update a widget with the given information inside of the array."><span class="description">Update a widget with the given information inside of the array.</span><pre>update_widget()</pre></a></li>
+<li class="method public "><a href="#method_update_widget_instance" title="update_widget_instance :: Update a widget instance with the given information inside of the array."><span class="description">Update a widget instance with the given information inside of the array.</span><pre>update_widget_instance()</pre></a></li>
+<li class="method public "><a href="#method_valid_widget_fields" title="valid_widget_fields :: Check if the given array has all of the necessary fields to create a
+widget."><span class="description">Check if the given array has all of the necessary fields to create a
+widget.</span><pre>valid_widget_fields()</pre></a></li>
+<li class="method public "><a href="#method_valid_widget_instance_fields" title="valid_widget_instance_fields :: Check if the given array has all of the necessary fields to create a
+sepecific widget instance."><span class="description">Check if the given array has all of the necessary fields to create a
+sepecific widget instance.</span><pre>valid_widget_instance_fields()</pre></a></li>
+</ul>
+</li></ul>
+</div>
+<div class="span8">
+<a id="\widgets"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/widgets.html">widgets</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">A static class to contain the widgets.inc.php static functions.</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:rctoris@wpi.edu">Russell Toris</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>2013 Russell Toris, Worcester Polytechnic Institute</td>
+</tr>
+<tr>
+<th>license</th>
+<td><a href="">BSD -- see LICENSE file</a></td>
+</tr>
+<tr>
+<th>version</th>
+<td>April, 12 2013</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/api.robot.environments.widgets.html">api.robot_environments.widgets</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_create_widget"></a><div class="element clickable method public method_create_widget" data-toggle="collapse" data-target=".method_create_widget .collapse">
+<h2>Create a widget with the given information.</h2>
+<pre>create_widget(string $name, string $table) : string | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Any errors are returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$name</h4>
+<code>string</code><p>The name of the widget</p></div>
+<div class="subelement argument">
+<h4>$table</h4>
+<code>string</code><p>The SQL table for the widget</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>An error message or null if the create was sucessful</div>
+</div></div>
+</div>
+<a id="method_create_widget_instance"></a><div class="element clickable method public method_create_widget_instance" data-toggle="collapse" data-target=".method_create_widget_instance .collapse">
+<h2>Create a widget instance with the given information.</h2>
+<pre>create_widget_instance(array $entries) : string | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The widget ID number
+should be included in the array. Any errors are returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$entries</h4>
+<code>array</code><p>The values for the widget creation</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>An error message or null if the create was sucessful</div>
+</div></div>
+</div>
+<a id="method_delete_widget_by_id"></a><div class="element clickable method public method_delete_widget_by_id" data-toggle="collapse" data-target=".method_delete_widget_by_id .collapse">
+<h2>Delete the widget array for the widget with the given ID.</h2>
+<pre>delete_widget_by_id(integer $id) : string | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Any errors are
+returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code><p>The widget ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>an error message or null if the delete was sucessful</div>
+</div></div>
+</div>
+<a id="method_delete_widget_instance_by_widgetid_and_id"></a><div class="element clickable method public method_delete_widget_instance_by_widgetid_and_id" data-toggle="collapse" data-target=".method_delete_widget_instance_by_widgetid_and_id .collapse">
+<h2>Delete the widget instance array for the widget with the given IDs.</h2>
+<pre>delete_widget_instance_by_widgetid_and_id(integer $widgetid, integer $id) : string | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Any
+errors are returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$widgetid</h4>
+<code>integer</code><p>The widget ID number to delete from</p></div>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code><p>The widget instance ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>an error message or null if the delete was sucessful</div>
+</div></div>
+</div>
+<a id="method_get_unused_widget_tables"></a><div class="element clickable method public method_get_unused_widget_tables" data-toggle="collapse" data-target=".method_get_unused_widget_tables .collapse">
+<h2>Get an array of all the unused widget SQL tables or null if none exist.</h2>
+<pre>get_unused_widget_tables() : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>A valid table is any table with an 'envid' field, and a 'label' field.</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>An array of the unused widget SQL tables or null if
+    none exist</div>
+</div></div>
+</div>
+<a id="method_get_widget_by_id"></a><div class="element clickable method public method_get_widget_by_id" data-toggle="collapse" data-target=".method_get_widget_by_id .collapse">
+<h2>Get the widget array for the widget with the given ID, or null if none
+exist.</h2>
+<pre>get_widget_by_id(integer $id) : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code><p>The widget ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>An array of the widget's SQL entry or null if none
+    exist</div>
+</div></div>
+</div>
+<a id="method_get_widget_by_table"></a><div class="element clickable method public method_get_widget_by_table" data-toggle="collapse" data-target=".method_get_widget_by_table .collapse">
+<h2>Get the widget array for the widget with the given SQL table, or null if
+none exist.</h2>
+<pre>get_widget_by_table(string $table) : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$table</h4>
+<code>string</code><p>The widget SQL table</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>An array of the widgets's SQL entry or null if none
+    exist</div>
+</div></div>
+</div>
+<a id="method_get_widget_editor"></a><div class="element clickable method public method_get_widget_editor" data-toggle="collapse" data-target=".method_get_widget_editor .collapse">
+<h2>Get the HTML for an editor used to create or edit the given widget entry.</h2>
+<pre>get_widget_editor(integer | null $id) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If this is not an edit, null can be given as the ID.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code><code>null</code><p>the ID of the widget to edit, or null if a new
+    entry is being made</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>A string containing the HTML of the editor</div>
+</div></div>
+</div>
+<a id="method_get_widget_instance_by_widgetid_and_id"></a><div class="element clickable method public method_get_widget_instance_by_widgetid_and_id" data-toggle="collapse" data-target=".method_get_widget_instance_by_widgetid_and_id .collapse">
+<h2>Get the widget instance array for the widget with the given IDs, or null
+if none exist.</h2>
+<pre>get_widget_instance_by_widgetid_and_id(integer $widgetid, integer $id) : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$widgetid</h4>
+<code>integer</code><p>The widget ID number to get the instance from</p></div>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code><p>The widget instance ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>An array of the widget's SQL entry or null if none
+    exist</div>
+</div></div>
+</div>
+<a id="method_get_widget_instance_editor_by_widgetid"></a><div class="element clickable method public method_get_widget_instance_editor_by_widgetid" data-toggle="collapse" data-target=".method_get_widget_instance_editor_by_widgetid .collapse">
+<h2>Get the HTML for an editor used to create or edit the given widget
+instance entry.</h2>
+<pre>get_widget_instance_editor_by_widgetid(integer | null $widgetid, integer | null $id) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If this is not an edit, null can be given as the ID.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$widgetid</h4>
+<code>integer</code><code>null</code><p>the ID of the widget to get the instance
+    editor for</p></div>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code><code>null</code><p>the ID of the widget instance to edit, or null if
+    a new entry is being made</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>A string containing the HTML of the editor</div>
+</div></div>
+</div>
+<a id="method_get_widget_instances_by_widgetid"></a><div class="element clickable method public method_get_widget_instances_by_widgetid" data-toggle="collapse" data-target=".method_get_widget_instances_by_widgetid .collapse">
+<h2>Get an array of the instances of the given widget, or null if none exist.</h2>
+<pre>get_widget_instances_by_widgetid(integer $widgetid) : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$widgetid</h4>
+<code>integer</code><p>The widget ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>An array of the widget's instances or null if none
+    exist</div>
+</div></div>
+</div>
+<a id="method_get_widget_instances_by_widgetid_and_envid"></a><div class="element clickable method public method_get_widget_instances_by_widgetid_and_envid" data-toggle="collapse" data-target=".method_get_widget_instances_by_widgetid_and_envid .collapse">
+<h2>Get an array of the instances of the given widget for the given
+environment, or null if none exist.</h2>
+<pre>get_widget_instances_by_widgetid_and_envid(integer $widgetid, integer $envid) : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$widgetid</h4>
+<code>integer</code><p>The widget ID number</p></div>
+<div class="subelement argument">
+<h4>$envid</h4>
+<code>integer</code><p>The environment ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>An array of the widget's instances or null if none
+    exist</div>
+</div></div>
+</div>
+<a id="method_get_widget_table_columns_by_id"></a><div class="element clickable method public method_get_widget_table_columns_by_id" data-toggle="collapse" data-target=".method_get_widget_table_columns_by_id .collapse">
+<h2>Get the column names in the MySQL table for the widget with the given ID,
+or null if none exist.</h2>
+<pre>get_widget_table_columns_by_id(integer $id) : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code><p>The widget ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>An array of the widget's MySQL table column names or
+    null if none exist</div>
+</div></div>
+</div>
+<a id="method_get_widgets"></a><div class="element clickable method public method_get_widgets" data-toggle="collapse" data-target=".method_get_widgets .collapse">
+<h2>Get an array of all the widget entries, or null if none exist.</h2>
+<pre>get_widgets() : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>An array of all the widget entries, or null if none
+    exist</div>
+</div></div>
+</div>
+<a id="method_update_widget"></a><div class="element clickable method public method_update_widget" data-toggle="collapse" data-target=".method_update_widget .collapse">
+<h2>Update a widget with the given information inside of the array.</h2>
+<pre>update_widget(array $fields) : string | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The array
+should be indexed by the SQL column names. The ID field must be contained
+inside of the array with the index 'id'. Any errors are returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$fields</h4>
+<code>array</code><p>the fields to update including the widget ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>an error message or null if the update was sucessful</div>
+</div></div>
+</div>
+<a id="method_update_widget_instance"></a><div class="element clickable method public method_update_widget_instance" data-toggle="collapse" data-target=".method_update_widget_instance .collapse">
+<h2>Update a widget instance with the given information inside of the array.</h2>
+<pre>update_widget_instance(array $fields) : string | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The array should be indexed by the SQL column names. The ID field must be
+contained inside of the array with the index 'id' for the instance ID and
+index 'widgetid` for the widget's ID. Any errors are returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$fields</h4>
+<code>array</code><p>the fields to update including the widget ID numbers</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>an error message or null if the update was sucessful</div>
+</div></div>
+</div>
+<a id="method_valid_widget_fields"></a><div class="element clickable method public method_valid_widget_fields" data-toggle="collapse" data-target=".method_valid_widget_fields .collapse">
+<h2>Check if the given array has all of the necessary fields to create a
+widget.</h2>
+<pre>valid_widget_fields(array $array) : boolean</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$array</h4>
+<code>array</code><p>The array to check</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>If the given array has all of the necessary fields to
+    create a new widget</div>
+</div></div>
+</div>
+<a id="method_valid_widget_instance_fields"></a><div class="element clickable method public method_valid_widget_instance_fields" data-toggle="collapse" data-target=".method_valid_widget_instance_fields .collapse">
+<h2>Check if the given array has all of the necessary fields to create a
+sepecific widget instance.</h2>
+<pre>valid_widget_instance_fields(array $array) : boolean</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This includes the widget ID number inside the
+entry 'widgetid'.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$array</h4>
+<code>array</code><p>The array to check</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>If the given array has all of the necessary fields to
+    create a new widget instance</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-04-16T13:14:58-07:00.<br></footer></div>
+</div>
+</body>
+</html>
