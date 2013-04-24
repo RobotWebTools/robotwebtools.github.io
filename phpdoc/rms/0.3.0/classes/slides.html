@@ -1,0 +1,309 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+<meta charset="utf-8">
+<title>phpDocumentor » \slides</title>
+<meta name="author" content="Mike van Riel">
+<meta name="description" content="">
+<link href="../css/template.css" rel="stylesheet" media="all">
+<script src="../js/jquery-1.7.1.min.js" type="text/javascript"></script><script src="../js/jquery-ui-1.8.2.custom.min.js" type="text/javascript"></script><script src="../js/jquery.mousewheel.min.js" type="text/javascript"></script><script src="../js/bootstrap.js" type="text/javascript"></script><script src="../js/template.js" type="text/javascript"></script><script src="../js/prettify/prettify.min.js" type="text/javascript"></script><link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="../img/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="../img/apple-touch-icon-114x114.png">
+</head>
+<body>
+<div class="navbar navbar-fixed-top">
+<div class="navbar-inner"><div class="container">
+<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a><a class="brand" href="../index.html">phpDocumentor</a><div class="nav-collapse"><ul class="nav">
+<li class="dropdown">
+<a href="#api" class="dropdown-toggle" data-toggle="dropdown">
+                                    API Documentation <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a>Packages</a></li>
+<li><a href="../packages/api.html"><i class="icon-folder-open"></i> api</a></li>
+<li><a href="../packages/css.html"><i class="icon-folder-open"></i> css</a></li>
+<li><a href="../packages/img.html"><i class="icon-folder-open"></i> img</a></li>
+<li><a href="../packages/inc.html"><i class="icon-folder-open"></i> inc</a></li>
+<li><a href="../packages/js.html"><i class="icon-folder-open"></i> js</a></li>
+</ul>
+</li>
+<li class="dropdown" id="charts-menu">
+<a href="#charts" class="dropdown-toggle" data-toggle="dropdown">
+                                    Charts <b class="caret"></b></a><ul class="dropdown-menu"><li><a href="../graph_class.html"><i class="icon-list-alt"></i> Class hierarchy diagram</a></li></ul>
+</li>
+<li class="dropdown" id="reports-menu">
+<a href="#reports" class="dropdown-toggle" data-toggle="dropdown">
+                                    Reports <b class="caret"></b></a><ul class="dropdown-menu">
+<li><a href="../errors.html"><i class="icon-remove-sign"></i> Errors 
+                <span class="label label-info">0</span></a></li>
+<li><a href="../markers.html"><i class="icon-map-marker"></i> Markers 
+                <ul></ul></a></li>
+<li><a href="../deprecated.html"><i class="icon-stop"></i> Deprecated elements 
+                <span class="label label-info">0</span></a></li>
+</ul>
+</li>
+</ul></div>
+</div></div>
+<div class="go_to_top"><a href="#___" style="color: inherit">Back to top  <i class="icon-upload icon-white"></i></a></div>
+</div>
+<div id="___" class="container">
+<noscript><div class="alert alert-warning">
+                            Javascript is disabled; several features are only available
+                            if Javascript is enabled.
+                        </div></noscript>
+<div class="row">
+<div class="span4">
+<span class="btn-group visibility" data-toggle="buttons-checkbox"><button class="btn public active" title="Show public elements">Public</button><button class="btn protected" title="Show protected elements">Protected</button><button class="btn private" title="Show private elements">Private</button><button class="btn inherited active" title="Show inherited elements">Inherited</button></span><div class="btn-group view pull-right" data-toggle="buttons-radio">
+<button class="btn details" title="Show descriptions and method names"><i class="icon-list"></i></button><button class="btn simple" title="Show only method names"><i class="icon-align-justify"></i></button>
+</div>
+<ul class="side-nav nav nav-list"><li class="nav-header">
+<i class="icon-custom icon-method"></i> Methods
+                    <ul>
+<li class="method public "><a href="#method_create_slide" title="create_slide :: Create a slide with the given information."><span class="description">Create a slide with the given information.</span><pre>create_slide()</pre></a></li>
+<li class="method public "><a href="#method_create_slide_html" title="create_slide_html :: Get the HTML for creating the given slide inside of the slideshow."><span class="description">Get the HTML for creating the given slide inside of the slideshow.</span><pre>create_slide_html()</pre></a></li>
+<li class="method public "><a href="#method_create_slideshow_html" title="create_slideshow_html :: Get the HTML for creating the slideshow."><span class="description">Get the HTML for creating the slideshow.</span><pre>create_slideshow_html()</pre></a></li>
+<li class="method public "><a href="#method_delete_slide_by_id" title="delete_slide_by_id :: Delete the slide array and image for the slide with the given ID."><span class="description">Delete the slide array and image for the slide with the given ID.</span><pre>delete_slide_by_id()</pre></a></li>
+<li class="method public "><a href="#method_get_slide_by_id" title="get_slide_by_id :: Get the slide array for the slide with the given ID, or null if none
+exist."><span class="description">Get the slide array for the slide with the given ID, or null if none
+exist.</span><pre>get_slide_by_id()</pre></a></li>
+<li class="method public "><a href="#method_get_slide_by_img" title="get_slide_by_img :: Get the slide array for the slide with the given image name, or null if
+    none exist."><span class="description">Get the slide array for the slide with the given image name, or null if
+    none exist.</span><pre>get_slide_by_img()</pre></a></li>
+<li class="method public "><a href="#method_get_slide_editor" title="get_slide_editor :: Get the HTML for an editor used to create or edit the given slide entry."><span class="description">Get the HTML for an editor used to create or edit the given slide entry.</span><pre>get_slide_editor()</pre></a></li>
+<li class="method public "><a href="#method_get_slides" title="get_slides :: Get an array of all slide entires in the database or null if none exist."><span class="description">Get an array of all slide entires in the database or null if none exist.</span><pre>get_slides()</pre></a></li>
+<li class="method public "><a href="#method_update_slide" title="update_slide :: Update an interface with the given information inside of the array."><span class="description">Update an interface with the given information inside of the array.</span><pre>update_slide()</pre></a></li>
+<li class="method public "><a href="#method_upload_img" title="upload_img :: Upload a slide image with the given information."><span class="description">Upload a slide image with the given information.</span><pre>upload_img()</pre></a></li>
+<li class="method public "><a href="#method_valid_slide_fields" title="valid_slide_fields :: Check if the given array has all of the necessary fields to create slide."><span class="description">Check if the given array has all of the necessary fields to create slide.</span><pre>valid_slide_fields()</pre></a></li>
+</ul>
+</li></ul>
+</div>
+<div class="span8">
+<a id="\slides"></a><ul class="breadcrumb">
+<li>
+<a href="../index.html"><i class="icon-custom icon-class"></i></a><span class="divider">\</span>
+</li>
+<li><a href="../namespaces/global.html">global</a></li>
+<li class="active">
+<span class="divider">\</span><a href="../classes/slides.html">slides</a>
+</li>
+</ul>
+<div class="element class">
+<p class="short_description">A static class to contain the slides.inc.php static functions.</p>
+<div class="details">
+<div class="long_description"></div>
+<table class="table table-bordered">
+<tr>
+<th>author</th>
+<td><a href="mailto:rctoris@wpi.edu">Russell Toris</a></td>
+</tr>
+<tr>
+<th>copyright</th>
+<td>2013 Russell Toris, Worcester Polytechnic Institute</td>
+</tr>
+<tr>
+<th>license</th>
+<td><a href="">BSD -- see LICENSE file</a></td>
+</tr>
+<tr>
+<th>version</th>
+<td>April, 12 2013</td>
+</tr>
+<tr>
+<th>package</th>
+<td><a href="../packages/api.content.slides.html">api.content.slides</a></td>
+</tr>
+</table>
+<h3>
+<i class="icon-custom icon-method"></i> Methods</h3>
+<a id="method_create_slide"></a><div class="element clickable method public method_create_slide" data-toggle="collapse" data-target=".method_create_slide .collapse">
+<h2>Create a slide with the given information.</h2>
+<pre>create_slide(string $caption, integer $index, string $fname, string $tmpFileLocation) : string | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Any errors are returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$caption</h4>
+<code>string</code><p>The slide caption</p></div>
+<div class="subelement argument">
+<h4>$index</h4>
+<code>integer</code><p>The slide index</p></div>
+<div class="subelement argument">
+<h4>$fname</h4>
+<code>string</code><p>The name of the file to save in the lides folder</p></div>
+<div class="subelement argument">
+<h4>$tmpFileLocation</h4>
+<code>string</code><p>the temp file location of the uploaded
+    image</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>An error message or null if the create was sucessful</div>
+</div></div>
+</div>
+<a id="method_create_slide_html"></a><div class="element clickable method public method_create_slide_html" data-toggle="collapse" data-target=".method_create_slide_html .collapse">
+<h2>Get the HTML for creating the given slide inside of the slideshow.</h2>
+<pre>create_slide_html(array $slide) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$slide</h4>
+<code>array</code><p>The slide SQL entry to generate HTML for</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The HTML for the slide</div>
+</div></div>
+</div>
+<a id="method_create_slideshow_html"></a><div class="element clickable method public method_create_slideshow_html" data-toggle="collapse" data-target=".method_create_slideshow_html .collapse">
+<h2>Get the HTML for creating the slideshow.</h2>
+<pre>create_slideshow_html() : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>The HTML for the slideshow</div>
+</div></div>
+</div>
+<a id="method_delete_slide_by_id"></a><div class="element clickable method public method_delete_slide_by_id" data-toggle="collapse" data-target=".method_delete_slide_by_id .collapse">
+<h2>Delete the slide array and image for the slide with the given ID.</h2>
+<pre>delete_slide_by_id(integer $id) : string | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Any
+errors are returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code><p>The slide ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>an error message or null if the delete was sucessful</div>
+</div></div>
+</div>
+<a id="method_get_slide_by_id"></a><div class="element clickable method public method_get_slide_by_id" data-toggle="collapse" data-target=".method_get_slide_by_id .collapse">
+<h2>Get the slide array for the slide with the given ID, or null if none
+exist.</h2>
+<pre>get_slide_by_id(integer $id) : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code><p>The slide ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>An array of the slide's SQL entry or null if none
+    exist</div>
+</div></div>
+</div>
+<a id="method_get_slide_by_img"></a><div class="element clickable method public method_get_slide_by_img" data-toggle="collapse" data-target=".method_get_slide_by_img .collapse">
+<h2>Get the slide array for the slide with the given image name, or null if
+    none exist.</h2>
+<pre>get_slide_by_img(integer $img) : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$img</h4>
+<code>integer</code><p>The slide image name</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>An array of the slide's SQL entry or null if none
+    exist</div>
+</div></div>
+</div>
+<a id="method_get_slide_editor"></a><div class="element clickable method public method_get_slide_editor" data-toggle="collapse" data-target=".method_get_slide_editor .collapse">
+<h2>Get the HTML for an editor used to create or edit the given slide entry.</h2>
+<pre>get_slide_editor(integer | null $id) : string</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>If this is not an edit, null can be given as the ID. An invalid ID is the
+same as giving a null ID.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$id</h4>
+<code>integer</code><code>null</code><p>the ID of the slide to edit, or null if a new
+    entry is being made</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code>A string containing the HTML of the editor</div>
+</div></div>
+</div>
+<a id="method_get_slides"></a><div class="element clickable method public method_get_slides" data-toggle="collapse" data-target=".method_get_slides .collapse">
+<h2>Get an array of all slide entires in the database or null if none exist.</h2>
+<pre>get_slides() : array | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>array</code><code>null</code>The array of slide entries or null if none exist.</div>
+</div></div>
+</div>
+<a id="method_update_slide"></a><div class="element clickable method public method_update_slide" data-toggle="collapse" data-target=".method_update_slide .collapse">
+<h2>Update an interface with the given information inside of the array.</h2>
+<pre>update_slide(array $fields) : string | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>The
+array should be indexed by the SQL column names. A request to upload the
+file should have been made with an HTTP POST. Any errors are returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$fields</h4>
+<code>array</code><p>the fields to update including the slide ID number</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>an error message or null if the update was sucessful</div>
+</div></div>
+</div>
+<a id="method_upload_img"></a><div class="element clickable method public method_upload_img" data-toggle="collapse" data-target=".method_upload_img .collapse">
+<h2>Upload a slide image with the given information.</h2>
+<pre>upload_img(string $fname, string $tmpFileLocation) : string | null</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>Any errors are returned.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$fname</h4>
+<code>string</code><p>The name of the file to save in the lides folder</p></div>
+<div class="subelement argument">
+<h4>$tmpFileLocation</h4>
+<code>string</code><p>the temp file location of the uploaded
+    image</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>string</code><code>null</code>An error message or null if the create was sucessful</div>
+</div></div>
+</div>
+<a id="method_valid_slide_fields"></a><div class="element clickable method public method_valid_slide_fields" data-toggle="collapse" data-target=".method_valid_slide_fields .collapse">
+<h2>Check if the given array has all of the necessary fields to create slide.</h2>
+<pre>valid_slide_fields(array $array) : boolean</pre>
+<div class="labels"><span class="label">Static</span></div>
+<div class="row collapse"><div class="detail-description">
+<div class="long_description"><p>This does include a check to see if a file was uploaded.</p></div>
+<h3>Parameters</h3>
+<div class="subelement argument">
+<h4>$array</h4>
+<code>array</code><p>The array to check</p></div>
+<h3>Returns</h3>
+<div class="subelement response">
+<code>boolean</code>If the given array has all of the necessary fields to
+    create a new slide</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><footer class="span12">
+            Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by <a href="http://glyphicons.com/">Glyphicons</a>.<br>
+            Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor 2.0.0a12</a> and<br>
+            generated on 2013-04-16T13:14:58-07:00.<br></footer></div>
+</div>
+</body>
+</html>
