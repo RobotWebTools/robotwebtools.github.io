@@ -72,14 +72,14 @@
                       <li><a href="tools.html#server-side">Server-Side</a></li>
                     </ul>
                   </li>
-                  <li class="current_page_item"><a href="demos.html" class="arrow">Demos</a>
+                  <li><a href="demos.html" class="arrow">Demos</a>
                     <ul>
                       <li><a href="demos.html#ros3djs">ros3djs</a></li>
                       <li><a href="demos.html#ros2djs">ros2djs</a></li>
                       <li><a href="demos.html#roslibjs">roslibjs</a></li>
                     </ul>
                   </li>
-                  <li><a href="news.html">News</a></li>
+                  <li class="current_page_item"><a href="news.html">News</a></li>
                   <li><a href="community.html">Community</a></li>
                 </ul>
               </nav>
@@ -91,91 +91,96 @@
       </div>
     </div>
   </div>
-
+    
   <!-- Main Wrapper -->
   <div id="main-wrapper">
     <div class="main-wrapper-style2">
       <div class="inner">
         <div class="5grid-layout">
           <div class="row">
-            <div class="12u mobileUI-main-content">
+            <div class="4u">
+              <div id="sidebar">
+
+                <!-- Sidebar -->
+                <section>
+                  <header class="major">
+                    <h2>Archive</h2>
+                  </header>
+                  <ul class="style2">
+                    <li><a href="#news-3">New Website Launched</a></li>
+                    <li><a href="#news-2">CDN Servers are Up</a></li>
+                    <li><a href="#news-1">Standarized Libraries Started </a></li>
+                  </ul>
+                </section>
+            
+              </div>
+            </div>
+            <div class="8u mobileUI-main-content">
               <div id="content">
 
-                <!-- Content -->
                 <article>
-                  <header>
-                    <h2>Live Demos</h2>
-                    <span class="byline">See the Power of Robot Web Tools</span>
-                  </header>
-
                   <header class="major">
-                    <h3 name="ros3djs" id="ros3djs">ros3djs Examples</h3>
+                    <h2>News</h2>
+                    <span class="byline">Announcements from Robot Web Tools</span>
                   </header>
+                </article>
 
-                  <div class="row">
-                    <div class="4u">
-                      <section>
-                        <span class="image image-full"><a href="demos/map.html"><img
-                            src="images/demos/ros3djs-map.jpg" /> </a> </span>
-                        <h3>Simple Occupancy Grid</h3>
-                      </section>
-                    </div>
-                    <div class="4u">
-                      <section>
-                        <span class="image image-full"><a href="demos/pr2-urdf.html"><img
-                            src="images/demos/ros3djs-pr2-urdf.jpg" /> </a> </span>
-                        <h3>PR2 URDF</h3>
-                      </section>
-                    </div>
-                    <div class="4u">
-                      <section>
-                        <span class="image image-full"><a href="demos/markers.html"><img
-                            src="images/demos/ros3djs-markers.jpg" /> </a> </span>
-                        <h3>Simple Markers</h3>
-                      </section>
-                    </div>
+                <!-- Content -->
+                <article class="box-excerpt" name="news-1" id="news-3">
+                  <a href="news.html#news-3" class="image image-left"><img src="images/pic04.jpg" /> </a>
+                  <div>
+                    <header>
+                      <span class="date">March 31, 2013</span>
+                      <h3>
+                        <a href="news.html#news-3">New Website Launched</a>
+                      </h3>
+                    </header>
+                    <p>
+                      The Robot Web Tools organization is proud to announce its new website. Along
+                      with bringing you the latests news related to the effort, this site will now
+                      showcase some demos and examples of the tools in action! And, as always, we <a
+                        href="https://github.com/RobotWebTools/robotwebtools.github.com/">welcome
+                        your contributions</a>!
+                    </p>
                   </div>
-                  <br /> <br />
-                  <div class="row">
-                    <div class="4u">
-                      <section>
-                        <span class="image image-full"><a href="demos/im.html"><img
-                            src="images/demos/ros3djs-im.jpg" /> </a> </span>
-                        <h3>Simple Interactive Markers</h3>
-                      </section>
-                    </div>
-                    <div class="4u">
-                      <section>
-                        <span class="image image-full"><a href="demos/r2-urdf.html"><img
-                            src="images/demos/ros3djs-r2-urdf.jpg" /> </a> </span>
-                        <h3>Robonaut URDF</h3>
-                      </section>
-                    </div>
-                    <div class="4u">
-                      <section>
-                        <span class="image image-full"><a href="demos/turtlebot-urdf.html"><img
-                            src="images/demos/ros3djs-turtlebot-urdf.jpg" /> </a> </span>
-                        <h3>Turtlebot 2 URDF</h3>
-                      </section>
-                    </div>
+                </article>
+
+                <article class="box-excerpt" name="news-1" id="news-2">
+                  <a href="news.html#news-2" class="image image-left"><img src="images/pic05.jpg" /> </a>
+                  <div>
+                    <header>
+                      <span class="date">March 29, 2013</span>
+                      <h3>
+                        <a href="news.html#news-2">CDN Servers are Up</a>
+                      </h3>
+                    </header>
+                    <p>In an effort to make using the tools provided by Robot Web Tools, we are
+                      excited to provide CDN services for most of our libraries. In addition to
+                      uploading different revisions of our tools and their dependencies, we are also
+                      providing resources such as robot Collada models!</p>
                   </div>
+                </article>
 
-                  <br /> <br /> <br />
-
-                  <header class="major">
-                    <h3 name="ros2djs" id="ros2djs">ros2djs Examples</h3>
-                  </header>
-
-                  <p>-- Coming Soon! --</p>
-
-                  <br /> <br /> <br />
-
-                  <header class="major">
-                    <h3 name="roslibjs" id="roslibjs">roslibjs Examples</h3>
-                  </header>
-
-                  <p>-- Coming Soon! --</p>
-
+                <article class="box-excerpt" name="news-1" id="news-1">
+                  <a href="news.html#news-1" class="image image-left"><img src="images/pic06.jpg" /> </a>
+                  <div>
+                    <header>
+                      <span class="date">March 20, 2013</span>
+                      <h3>
+                        <a href="news.html#news-1">Standarized Libraries Started</a>
+                      </h3>
+                    </header>
+                    <p>
+                      The core functionality of the Robot Web Tools JavaScript tools are being
+                      broken up into three libraries.
+                      <a href="https://github.com/RobotWebTools/roslibjs">roslibjs</a> will be responsible
+                      for the core communication to ROS via rosbridge,
+                      <a href="https://github.com/RobotWebTools/ros2djs">ros2djs</a> will
+                      contain modules for creating 2D visualization widgets, and
+                      <a href="https://github.com/RobotWebTools/ros3djs">ros3djs</a> will 
+                      contain modules for creating 3D visualization widgets.
+                    </p>
+                  </div>
                 </article>
 
               </div>
