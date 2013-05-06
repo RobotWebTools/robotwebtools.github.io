@@ -38,7 +38,7 @@
 <!--[if lte IE 8]><link rel="stylesheet" href="css/ie8.css" /><![endif]-->
 <!--[if lte IE 7]><link rel="stylesheet" href="css/ie7.css" /><![endif]-->
 </head>
-<body class="homepage">
+<body class="no-sidebar">
 
   <a href="https://github.com/RobotWebTools"><img
     style="position: absolute; top: 0; right: 0; border: 0;"
@@ -63,7 +63,7 @@
               <!-- Nav -->
               <nav id="nav" class="mobileUI-site-nav">
                 <ul>
-                  <li class="current_page_item"><a href="index.html">Home</a></li>
+                  <li><a href="index.html">Home</a></li>
                   <li><a href="tools.html" class="arrow">Tools</a>
                     <ul>
                       <li><a href="tools.html#libraries">Libraries</a></li>
@@ -79,7 +79,7 @@
                       <li><a href="demos.html#roslibjs">roslibjs</a></li>
                     </ul>
                   </li>
-                  <li><a href="news.html">News</a></li>
+                  <li class="current_page_item"><a href="news.html">News</a></li>
                   <li><a href="community.html">Community</a></li>
                 </ul>
               </nav>
@@ -87,151 +87,46 @@
             </div>
           </header>
 
-          <!-- Banner -->
-          <div id="banner">
-            <h2>
-              <strong>Robot Web Tools</strong> is a collection of open-source modules and tools for
-              building web-based robot apps.
-            </h2>
-            <p>Want to see Robot Web Tools in action?</p>
-            <a href="demos.html" class="button button-big button-icon button-icon-check">View
-              Demos</a>
-          </div>
-
         </div>
       </div>
     </div>
   </div>
-
+    
   <!-- Main Wrapper -->
   <div id="main-wrapper">
-    <div class="main-wrapper-style1">
-      <div class="inner">
-
-        <!-- Feature 1 -->
-        <section class="5grid-layout box-feature1">
-          <div class="row">
-            <div class="12u">
-              <header class="first major">
-                <h2>Bringing Robots to your Favorite Browser</h2>
-                <span class="byline">Robot Web Tools allows web applications to interface
-                  with a variety of robots running middleware like the popular <strong>Robot
-                    Operating System (ROS)</strong> using the latest in <strong>HTML5</strong> 
-                    and <strong>JavaScript</strong>.</span>
-              </header>
-            </div>
-          </div>
-          <div class="row">
-            <div class="4u">
-              <section>
-                <span class="image image-full"><img src="images/pic01.jpg" /> </span>
-                <header class="second second-friends">
-                  <h3>3D Interactions</h3>
-                  <span class="byline">Using the latest in WebGL</span>
-                </header>
-              </section>
-            </div>
-            <div class="4u">
-              <section>
-                <span class="image image-full"><img src="images/pic02.jpg" /> </span>
-                <header class="second second-gear">
-                  <h3>Multi-Platform Support</h3>
-                  <span class="byline">Harnessing the power of ROS</span>
-                </header>
-              </section>
-            </div>
-            <div class="4u">
-              <section>
-                <span class="image image-full"><img src="images/pic03.jpg" /> </span>
-                <header class="second second-chart">
-                  <h3>Towards Compatibility</h3>
-                  <span class="byline">More browsers, more robots.</span>
-                </header>
-              </section>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
     <div class="main-wrapper-style2">
-      <div class="inner">
-
-        <!-- Feature 2 -->
-        <section class="5grid-layout box-feature2">
-          <div class="row">
-            <div class="6u">
-              <section class="pad-right">
-                <header class="major">
-                  <h2>Robot Web Architecture</h2>
-                  <span class="byline">Bridging Robots and the Web</span>
-                </header>
-                <p>
-                  A variety of routes are available for architecting a robot web application. A
-                  common route is building web technologies on an existing robot framework. The <a
-                    href="http://www.ros.org/wiki/">Robot Operating System (ROS)</a> is one of the
-                  more popular robot middlewares to build upon.
-                </p>
-                <p>
-                  ROS is one of the top frameworks to program robots and can run on a variety of
-                  robots, from a <a href="http://turtlebot.com/">TurtleBot</a> to a <a
-                    href="http://www.willowgarage.com/pages/pr2/overview">PR2</a> to an <a
-                    href="http://www.arduino.cc/">Arduino</a> connected to a computer. ROS - and
-                  other robot middleware frameworks - provide common robot functionality, including
-                  drivers for interfacing with a variety of sensors and actuators and algorithms for
-                  navigation, perception, and manipulation.
-                </p>
-                <footer>
-                  <a href="http://www.ros.org/wiki/"
-                    class="button button-medium button-icon button-icon-rarrow">Find out more</a>
-                </footer>
-              </section>
-            </div>
-            <div class="6u">
-              <section class="pad-left">
-                <header class="major">
-                  <h2>rosbridge as a Transport</h2>
-                  <span class="byline">Using JSON to Speak to your Robot</span>
-                </header>
-                <p>
-                  While ROS works great for applications on the robot, another layer is needed to
-                  connect external devices and applications. <a href="http://www.rosbridge.org/">
-                  rosbridge</a> is both a JSON spec for interacting with ROS and a transport layer,
-                  providing a WebSocket for clients to communicate over.
-                </p>
-                <p>
-                  In the browser layer sits the core JavaScript libraries: 
-                  <a href="https://github.com/RobotWebTools/roslibjs">roslibjs</a>,
-                  <a href="https://github.com/RobotWebTools/ros2djs">ros2js</a>, and
-                  <a href="https://github.com/RobotWebTools/ros3djs">ros3djs</a>. These libraries 
-                  communicate with ROS on the robot over rosbridge's WebSocket server. It's a lightweight,
-                  evented library that provides a convenient abstraction to core ROS functionality.
-                </p>
-                <p>
-                  The real benefits of the Robot Web Tools organization is JavaScript modules and
-                  tools that build off these foundations. Check out the <a href="tools.html">Tools</a>
-                  section for a list of what the community has contributed. And please <a
-                    href="https://github.com/RobotWebTools/robotwebtools.github.com/">add your
-                    own</a>!
-                </p>
-              </section>
-            </div>
-          </div>
-        </section>
-
-      </div>
-    </div>
-    <div class="main-wrapper-style3">
       <div class="inner">
         <div class="5grid-layout">
           <div class="row">
-            <div class="8u">
+            <div class="4u">
+              <div id="sidebar">
 
-              <!-- Article list -->
-              <section class="box-article-list">
-                <h2 class="icon icon-news">Latest News</h2>
+                <!-- Sidebar -->
+                <section>
+                  <header class="major">
+                    <h2>Archive</h2>
+                  </header>
+                  <ul class="style2">
+                    <li><a href="#news-3">New Website Launched</a></li>
+                    <li><a href="#news-2">CDN Servers are Up</a></li>
+                    <li><a href="#news-1">Standarized Libraries Started </a></li>
+                  </ul>
+                </section>
+            
+              </div>
+            </div>
+            <div class="8u mobileUI-main-content">
+              <div id="content">
 
-                <!-- Excerpt -->
-                <article class="box-excerpt">
+                <article>
+                  <header class="major">
+                    <h2>News</h2>
+                    <span class="byline">Announcements from Robot Web Tools</span>
+                  </header>
+                </article>
+
+                <!-- Content -->
+                <article class="box-excerpt" name="news-1" id="news-3">
                   <a href="news.html#news-3" class="image image-left"><img src="images/pic04.jpg" /> </a>
                   <div>
                     <header>
@@ -250,8 +145,7 @@
                   </div>
                 </article>
 
-                <!-- Excerpt -->
-                <article class="box-excerpt">
+                <article class="box-excerpt" name="news-1" id="news-2">
                   <a href="news.html#news-2" class="image image-left"><img src="images/pic05.jpg" /> </a>
                   <div>
                     <header>
@@ -267,8 +161,7 @@
                   </div>
                 </article>
 
-                <!-- Excerpt -->
-                <article class="box-excerpt">
+                <article class="box-excerpt" name="news-1" id="news-1">
                   <a href="news.html#news-1" class="image image-left"><img src="images/pic06.jpg" /> </a>
                   <div>
                     <header>
@@ -290,41 +183,7 @@
                   </div>
                 </article>
 
-              </section>
-            </div>
-            <div class="4u">
-
-              <!-- Spotlight -->
-              <section class="box-spotlight pad-left">
-                <h2 class="icon icon-paper">Spotlight</h2>
-                <article>
-                  <a
-                    href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&arnumber=6377438&fb_action_ids=1855677106843&fb_action_types=og.likes&fb_source=aggregation&fb_aggregation_id=246965925417366"
-                    class="image image-full"><img src="images/pic07.jpg" alt=""> </a>
-                  <header>
-                    <h3>
-                      <a
-                        href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?reload=true&arnumber=6377438&fb_action_ids=1855677106843&fb_action_types=og.likes&fb_source=aggregation&fb_aggregation_id=246965925417366">Robot
-                        Web Tools [ROS Topics]</a>
-                    </h3>
-                    <span class="byline">Robotics &amp; Automation Magazine, IEEE</span>
-                  </header>
-                  <p>While the community’s efforts have facilitated significant milestones in
-                    robotics research, the core ROS middleware still requires a considerable
-                    learning curve, including a general understanding of UNIX systems and languages
-                    such as C++, Python, or Java. To generate interest in robotics in a larger, more
-                    general population, we must remove this requirement. The World Wide Web provides
-                    both a guiding example and a path for broadening the reach and accessibility of
-                    robotics. With the goal of building a larger community of robot Web app
-                    developers, we describe recent efforts to expose the functionality of ROS via
-                    common Web development tools such as JavaScript.</p>
-                  <footer>
-                    <a href="pdf/2012_RAM_Alexander_Hsiao_Jenkins_Suay_Toris.pdf"
-                      class="button button-alt button-icon button-icon-paper">Continue Reading</a>
-                  </footer>
-                </article>
-              </section>
-
+              </div>
             </div>
           </div>
         </div>
