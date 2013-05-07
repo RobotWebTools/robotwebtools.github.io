@@ -5,7 +5,7 @@
     "description" : "Keyboard Teleoperation via Twist Messages",
     "repository" : {
       "type" : "git",
-      "url" : "https://github.com/WPI-RAIL/keyboardteleopjs
+      "url" : "https://github.com/WPI-RAIL/keyboardteleopjs"
     }
   },
   "mjpeg_server" : {
@@ -23,7 +23,7 @@
     "description" : "Display a MJPEG stream from the ROS mjpeg_server Inside of a HTML5 Canvas",
     "repository" : {
       "type" : "git",
-      "url" : "https://github.com/WPI-RAIL/mjpegcanvasjs
+      "url" : "https://github.com/WPI-RAIL/mjpegcanvasjs"
     }
   },
   "nav2djs" : {
@@ -32,7 +32,7 @@
     "description" : "2D Navigation Widget",
     "repository" : {
       "type" : "git",
-      "url" : "https://github.com/WPI-RAIL/nav2djs
+      "url" : "https://github.com/WPI-RAIL/nav2djs"
     }
   },
   "rms" : {
@@ -41,7 +41,7 @@
     "description" : "RMS (Robot Management System)",
     "repository" : {
       "type" : "git",
-      "url" : "https://github.com/WPI-RAIL/rms
+      "url" : "https://github.com/WPI-RAIL/rms"
     }
   },
   "ros2djs" : {
