@@ -6,9 +6,9 @@ Please send pull requests containing your edits, style updates, and any tools yo
 
 ## Listing Your Project
 
-To list your project, please post your project to the [master.json] file. Use the existing projects as examples. Please keep this list in alphabetical order.
+To list your project, please post your project to the master.json file. Use the existing projects as examples. Please keep this list in alphabetical order.
 
-Optionally, you can also list your project on the [tools.html] page. Again, please follow the existing examples.
+Optionally, you can also list your project on the tools.html page. Again, please follow the existing examples.
 
 Pull request any changes and projects you would like listed.
 
