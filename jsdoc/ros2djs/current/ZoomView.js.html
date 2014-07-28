@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: maps/OccupancyGridSrvClient.js</title>
+    <title>JSDoc: Source: visualization/ZoomView.js</title>
     
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Source: maps/OccupancyGridSrvClient.js</h1>
+    <h1 class="page-title">Source: visualization/ZoomView.js</h1>
     
     
 
@@ -26,55 +26,60 @@
     <section>
         <article>
             <pre class="prettyprint source"><code>/**
- * @author Jihoon Lee- jihoonlee.in@gmail.com
- * @author Russell Toris - rctoris@wpi.edu
+ * @author Bart van Vliet - bart@dobots.nl
  */
 
 /**
- * A static map that receives from map_server.
- *
- * Emits the following events:
- *   * 'change' - there was an update or change in the map
+ * Adds zooming to a view
  *
  * @constructor
  * @param options - object with following keys:
- *   * ros - the ROSLIB.Ros connection handle
- *   * service (optional) - the map topic to listen to, like '/static_map'
- *   * rootObject (optional) - the root object to add this marker to
+ *   * rootObject (optional) - the root object to apply zoom to
+ *   * minScale (optional) - minimum scale to set to preserve precision
  */
-ROS2D.OccupancyGridSrvClient = function(options) {
-  var that = this;
-  options = options || {};
-  var ros = options.ros;
-  var service = options.service || '/static_map';
-  this.rootObject = options.rootObject || new createjs.Container();
-
-  // current grid that is displayed
-  this.currentGrid = null;
-
-  // Setting up to the service
-  var rosService = new ROSLIB.Service({
-    ros : ros,
-    name : service,
-    serviceType : 'nav_msgs/GetMap',
-    compression : 'png'
-  });
-
-  rosService.callService(new ROSLIB.ServiceRequest(),function(response) {
-    // check for an old map
-    if (that.currentGrid) {
-      that.rootObject.removeChild(that.currentGrid);
-    }
-
-    that.currentGrid = new ROS2D.OccupancyGrid({
-      message : response.map
-    });
-    that.rootObject.addChild(that.currentGrid);
-
-    that.emit('change', that.currentGrid);
-  });
+ROS2D.ZoomView = function(options) {
+	options = options || {};
+	this.rootObject = options.rootObject;
+	this.minScale = options.minScale || 0.001;
+	
+	// get a handle to the stage
+	if (this.rootObject instanceof createjs.Stage) {
+		this.stage = this.rootObject;
+	}
+	else {
+		this.stage = this.rootObject.getStage();
+	}
+	
+	this.center = new ROSLIB.Vector3();
+	this.startShift = new ROSLIB.Vector3();
+	this.startScale = new ROSLIB.Vector3();
 };
-ROS2D.OccupancyGridSrvClient.prototype.__proto__ = EventEmitter2.prototype;
+
+
+ROS2D.ZoomView.prototype.startZoom = function(centerX, centerY) {
+	this.center.x = centerX;
+	this.center.y = centerY;
+	this.startShift.x = this.stage.x;
+	this.startShift.y = this.stage.y;
+	this.startScale.x = this.stage.scaleX;
+	this.startScale.y = this.stage.scaleY;
+};
+
+ROS2D.ZoomView.prototype.zoom = function(zoom) {
+	// Make sure scale doesn't become too small
+	if (this.startScale.x*zoom &lt; this.minScale) {
+		zoom = this.minScale/this.startScale.x;
+	}
+	if (this.startScale.y*zoom &lt; this.minScale) {
+		zoom = this.minScale/this.startScale.y;
+	}
+	
+	this.stage.scaleX = this.startScale.x*zoom;
+	this.stage.scaleY = this.startScale.y*zoom;
+	
+	this.stage.x = this.startShift.x - (this.center.x-this.startShift.x) * (this.stage.scaleX/this.startScale.x - 1);
+	this.stage.y = this.startShift.y - (this.center.y-this.startShift.y) * (this.stage.scaleY/this.startScale.y - 1);
+};
 </code></pre>
         </article>
     </section>
