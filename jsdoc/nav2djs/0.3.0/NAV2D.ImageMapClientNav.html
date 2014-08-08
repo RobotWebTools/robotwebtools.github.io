@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Class: Navigator</title>
+    <title>JSDoc: Class: ImageMapClientNav</title>
     
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
     
-    <h1 class="page-title">Class: Navigator</h1>
+    <h1 class="page-title">Class: ImageMapClientNav</h1>
     
     
 
@@ -29,7 +29,7 @@
     <h2>
         <span class="ancestors"><a href="global.html#NAV2D">NAV2D</a>.</span>
     
-    Navigator
+    ImageMapClientNav
     </h2>
     
 </header>  
@@ -41,7 +41,7 @@
     
         
 <dt>
-    <h4 class="name" id="Navigator"><span class="type-signature"></span>new Navigator<span class="signature">(options)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="ImageMapClientNav"><span class="type-signature"></span>new ImageMapClientNav<span class="signature">(options)</span><span class="type-signature"></span></h4>
     
     
 </dt>
@@ -49,10 +49,7 @@
     
     
     <div class="description">
-        A navigator can be used to add click-to-navigate options to an object. If
-withOrientation is set to true, the user can also specify the orientation of
-the robot by clicking at the goal position and pointing into the desired
-direction (while holding the button pressed).
+        A OccupancyGridClientNav uses an OccupancyGridClient to create a map for use with a Navigator.
     </div>
     
 
@@ -99,10 +96,13 @@ direction (while holding the button pressed).
             
             <td class="description last">object with following keys:
   * ros - the ROSLIB.Ros connection handle
+  * topic (optional) - the map meta data topic to listen to
+  * image - the URL of the image to render
   * serverName (optional) - the action server name to use for navigation, like '/move_base'
   * actionName (optional) - the navigation action name, like 'move_base_msgs/MoveBaseAction'
   * rootObject (optional) - the root object to add the click listeners to and render robot markers to
-  * withOrientation (optional) - if the Navigator should consider the robot orientation (default: false)</td>
+  * withOrientation (optional) - if the Navigator should consider the robot orientation (default: false)
+  * viewer - the main viewer to render to</td>
         </tr>
 	
 	
@@ -133,7 +133,7 @@ direction (while holding the button pressed).
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Navigator.js.html">navigator/Navigator.js</a>, line 20
+        <a href="ImageMapClientNav.js.html">navigator/ImageMapClientNav.js</a>, line 19
     </li></ul></dd>
     
     
@@ -169,118 +169,6 @@ direction (while holding the button pressed).
     
     
     
-    
-        <h3 class="subsection-title">Methods</h3>
-        
-        <dl>
-            
-<dt>
-    <h4 class="name" id="sendGoal"><span class="type-signature">&lt;inner> </span>sendGoal<span class="signature">(pose)</span><span class="type-signature"></span></h4>
-    
-    
-</dt>
-<dd>
-    
-    
-    <div class="description">
-        Send a goal to the navigation stack with the given pose.
-    </div>
-    
-
-    
-    
-    
-    
-    
-        <h5>Parameters:</h5>
-        
-
-<table class="params">
-    <thead>
-	<tr>
-		
-		<th>Name</th>
-		
-		
-		<th>Type</th>
-		
-		
-		
-		
-		
-		<th class="last">Description</th>
-	</tr>
-	</thead>
-	
-	<tbody>
-	
-	
-        <tr>
-            
-                <td class="name"><code>pose</code></td>
-            
-            
-            <td class="type">
-            
-            </td>
-            
-            
-            
-            
-            
-            <td class="description last">the goal pose</td>
-        </tr>
-	
-	
-	</tbody>
-</table>
-    
-    
-    
-<dl class="details">
-    
-        
-    
-    
-    
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="Navigator.js.html">navigator/Navigator.js</a>, line 41
-    </li></ul></dd>
-    
-    
-    
-    
-    
-    
-    
-</dl>
-
-    
-    
-    
-    
-    
-    
-    
-    
-</dd>
-
-        </dl>
     
     
     
