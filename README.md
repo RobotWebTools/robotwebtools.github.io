@@ -1,4 +1,4 @@
-robotwebtools.github.com [![Build Status](https://api.travis-ci.org/RobotWebTools/robotwebtools.github.com.png)](https://travis-ci.org/RobotWebTools/robotwebtools.github.com)
+robotwebtools.github.com
 ========================
 
 #### RobotWebTools.org
@@ -7,9 +7,7 @@ This is the repository for [RobotWebTools.org](http://robotwebtools.org) - a col
 Please send pull requests containing your edits, style updates, and any tools you'd like listed.
 
 ### Listing Your Project
-To list your project, please post your project to the master.json file. Use the existing projects as examples. Please keep this list in alphabetical order.
-
-Optionally, you can also list your project on the tools.html page. Again, please follow the existing examples.
+To list your project,  you can also list your project on the tools.html page. Please follow the existing examples.
 
 Pull request any changes and projects you would like listed.
 
