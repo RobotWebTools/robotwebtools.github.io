@@ -52,15 +52,6 @@
       rootObject : viewer.scene,
       loader :  ROS3D.COLLADA_LOADER
     });
-
-    new ROS3D.UrdfClient({
-      ros : ros,
-      tfClient : tfClient,
-      path : 'http://resources.robotwebtools.org/',
-      rootObject : viewer.scene,
-      param : 'ilab_description',
-      loader :  ROS3D.COLLADA_LOADER
-    });
   }
 </script>
 </head>
