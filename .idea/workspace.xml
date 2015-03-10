@@ -2,37 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8708a8d6-133e-414d-af9e-252529be1107" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ArrowShape.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ArrowShape.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/Grid.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/Grid.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ImageMap.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ImageMap.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ImageMapClient.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ImageMapClient.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/NavigationArrow.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/NavigationArrow.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/OccupancyGrid.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/OccupancyGrid.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/OccupancyGridClient.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/OccupancyGridClient.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/OccupancyGridSrvClient.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/OccupancyGridSrvClient.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/PanView.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/PanView.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/PathShape.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/PathShape.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/PolygonShape.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/PolygonShape.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.ArrowShape.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.ArrowShape.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.Grid.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.Grid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.ImageMap.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.ImageMap.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.ImageMapClient.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.ImageMapClient.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.NavigationArrow.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.NavigationArrow.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.OccupancyGrid.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.OccupancyGrid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.OccupancyGridClient.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.OccupancyGridClient.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.OccupancyGridSrvClient.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.OccupancyGridSrvClient.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.PanView.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.PanView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.PathShape.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.PathShape.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.PolygonMarker.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.PolygonMarker.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.TraceShape.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.TraceShape.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.Viewer.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.Viewer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.ZoomView.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ROS2D.ZoomView.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/Ros2D.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/Ros2D.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/TraceShape.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/TraceShape.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/Viewer.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/Viewer.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/ZoomView.js.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/ZoomView.js.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/global.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/global.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/jsdoc/ros2djs/current/index.html" afterPath="$PROJECT_DIR$/jsdoc/ros2djs/current/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="robotwebtools.github.com.iws" />
