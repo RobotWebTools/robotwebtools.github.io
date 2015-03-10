@@ -125,12 +125,6 @@
         </a>
     </li>
 
-                                                                                                        <li class="method public">
-        <a href="#method_view" title="view :: Default view function. This method can be overwritten for custom controller functionality.">
-            <span class="description">Default view function. This method can be overwritten for custom controller functionality.</span><pre>view</pre>
-        </a>
-    </li>
-
                                                                                                         <li class="method public inherited">
         <a href="#method_isAuthorized" title="isAuthorized :: The global authorization method. This will be automatically called and used if the authorize controller is an
 an included component in the given controller.">
@@ -140,14 +134,20 @@ an included component in the given controller.</span><pre>isAuthorized</pre>
     </li>
 
                                                                                                         <li class="method public inherited">
+        <a href="#method_sendBatchEmail" title="sendBatchEmail :: Send an email to a group of given users. No effect is made if email is disabled.">
+            <span class="description">Send an email to a group of given users. No effect is made if email is disabled.</span><pre>sendBatchEmail</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public inherited">
         <a href="#method_sendEmail" title="sendEmail :: Send an email message to a user. No effect is made if email is disabled.">
             <span class="description">Send an email message to a user. No effect is made if email is disabled.</span><pre>sendEmail</pre>
         </a>
     </li>
 
-                                                                                                        <li class="method public inherited">
-        <a href="#method_sendBatchEmail" title="sendBatchEmail :: Send an email to a group of given users. No effect is made if email is disabled.">
-            <span class="description">Send an email to a group of given users. No effect is made if email is disabled.</span><pre>sendBatchEmail</pre>
+                                                                                                        <li class="method public">
+        <a href="#method_view" title="view :: Default view function. This method can be overwritten for custom controller functionality.">
+            <span class="description">Default view function. This method can be overwritten for custom controller functionality.</span><pre>view</pre>
         </a>
     </li>
 
@@ -225,7 +225,7 @@ authorized to view the given interface.</p>
                                         version
                                                                             </th>
                                     <td>
-                                                                                    2.0.2
+                                                                                    2.0.5
                                                                                 
                                     </td>
                                 </tr>
@@ -248,6 +248,8 @@ authorized to view the given interface.</p>
                             <pre>beforeFilter() : null</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
@@ -267,40 +269,17 @@ authorized to view the given interface.</p>
                                         <code>null</code><p></p>
                                                                     </div>
                             </div>
-                        </div>
-                                            <a id="method_view"></a>
-                        <div class="element clickable method public  method_view" data-toggle="collapse" data-target=".method_view .collapse">
-                            <h2>Default view function. This method can be overwritten for custom controller functionality.</h2>
-                            <pre>view() : null</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>null</code><p></p>
-                                                                    </div>
-                            </div>
                         </div>
                                             <a id="method_isAuthorized"></a>
                         <div class="element clickable method public  method_isAuthorized inherited" data-toggle="collapse" data-target=".method_isAuthorized .collapse">
                             <h2>The global authorization method. This will be automatically called and used if the authorize controller is an
 an included component in the given controller.</h2>
-                            <pre>isAuthorized() : bool</pre>
+                            <pre>isAuthorized() : boolean</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
@@ -317,50 +296,10 @@ an included component in the given controller.</h2>
 
                                     
                                                                             <h3>Response</h3>
-                                        <code>bool</code><p><p>Returns if the user is authorized.</p></p>
+                                        <code>boolean</code><p><p>Returns if the user is authorized.</p></p>
                                                                     </div>
                             </div>
-                        </div>
-                                            <a id="method_sendEmail"></a>
-                        <div class="element clickable method public  method_sendEmail inherited" data-toggle="collapse" data-target=".method_sendEmail .collapse">
-                            <h2>Send an email message to a user. No effect is made if email is disabled.</h2>
-                            <pre>sendEmail(int $id = null, string $subject = &#039;&#039;, string $message = &#039;&#039;) : null</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    throws
-                                                </th>
-                                                <td>
-                                                                                                                                                                        
-                                                                                                                                                                        <p>Thrown if an invalid user ID is given.</p>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$id</h4>
-                                                <code>int</code><p><p>The user ID to send the message email to.</p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$subject</h4>
-                                                <code>string</code><p><p>The message subject.</p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$message</h4>
-                                                <code>string</code><p><p>The message text.</p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>null</code><p></p>
-                                                                    </div>
-                            </div>
                         </div>
                                             <a id="method_sendBatchEmail"></a>
                         <div class="element clickable method public  method_sendBatchEmail inherited" data-toggle="collapse" data-target=".method_sendBatchEmail .collapse">
@@ -368,6 +307,8 @@ an included component in the given controller.</h2>
                             <pre>sendBatchEmail(array $bcc = array(), string $subject = &#039;&#039;, string $message = &#039;&#039;) : null</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
@@ -393,6 +334,80 @@ an included component in the given controller.</h2>
                                         <code>null</code><p></p>
                                                                     </div>
                             </div>
+
+                        </div>
+                                            <a id="method_sendEmail"></a>
+                        <div class="element clickable method public  method_sendEmail inherited" data-toggle="collapse" data-target=".method_sendEmail .collapse">
+                            <h2>Send an email message to a user. No effect is made if email is disabled.</h2>
+                            <pre>sendEmail(integer $id = null, string $subject = &#039;&#039;, string $message = &#039;&#039;) : null</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Thrown if an invalid user ID is given.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$id</h4>
+                                                <code>integer</code><p><p>The user ID to send the message email to.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$subject</h4>
+                                                <code>string</code><p><p>The message subject.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$message</h4>
+                                                <code>string</code><p><p>The message text.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>null</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_view"></a>
+                        <div class="element clickable method public  method_view" data-toggle="collapse" data-target=".method_view .collapse">
+                            <h2>Default view function. This method can be overwritten for custom controller functionality.</h2>
+                            <pre>view() : null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>null</code><p></p>
+                                                                    </div>
+                            </div>
+
                         </div>
                     
                     
@@ -495,7 +510,7 @@ an included component in the given controller.</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Fri, 08 Aug 2014 10:46:31 -0400.<br/>
+            generated on Thu, 18 Dec 2014 09:44:04 -0500.<br/>
     </footer>
     </body>
 </html>

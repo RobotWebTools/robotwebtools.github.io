@@ -118,24 +118,8 @@
             <i class="icon-custom icon-method"></i> Methods
             <ul>
                                                                                                     <li class="method public">
-        <a href="#method_admin_index" title="admin_index :: The admin index action lists information about all articles. This allows the admin to add, edit, or delete
-entries.">
-            <span class="description">The admin index action lists information about all articles. This allows the admin to add, edit, or delete
-entries.</span><pre>admin_index</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
         <a href="#method_admin_add" title="admin_add :: The admin add action. This will allow the admin to create a new entry.">
             <span class="description">The admin add action. This will allow the admin to create a new entry.</span><pre>admin_add</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
-        <a href="#method_admin_incrementIndex" title="admin_incrementIndex :: Increment the index of the given article ID. This assumes the database is in a consistent state and that all
-indexes are sequential. This essentially swaps the entry after the given index with the target entry.">
-            <span class="description">Increment the index of the given article ID. This assumes the database is in a consistent state and that all
-indexes are sequential. This essentially swaps the entry after the given index with the target entry.</span><pre>admin_incrementIndex</pre>
         </a>
     </li>
 
@@ -148,20 +132,30 @@ indexes are sequential. This essentially swaps the entry before the given index 
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_admin_edit" title="admin_edit :: The admin edit action. This allows the admin to edit an existing entry.">
-            <span class="description">The admin edit action. This allows the admin to edit an existing entry.</span><pre>admin_edit</pre>
-        </a>
-    </li>
-
-                                                                                                        <li class="method public">
         <a href="#method_admin_delete" title="admin_delete :: The admin delete action. This allows the admin to delete an existing entry.">
             <span class="description">The admin delete action. This allows the admin to delete an existing entry.</span><pre>admin_delete</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public">
-        <a href="#method_index" title="index :: The default index simply redirects to the page&#039;s homepage action.">
-            <span class="description">The default index simply redirects to the page&#039;s homepage action.</span><pre>index</pre>
+        <a href="#method_admin_edit" title="admin_edit :: The admin edit action. This allows the admin to edit an existing entry.">
+            <span class="description">The admin edit action. This allows the admin to edit an existing entry.</span><pre>admin_edit</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_admin_incrementIndex" title="admin_incrementIndex :: Increment the index of the given article ID. This assumes the database is in a consistent state and that all
+indexes are sequential. This essentially swaps the entry after the given index with the target entry.">
+            <span class="description">Increment the index of the given article ID. This assumes the database is in a consistent state and that all
+indexes are sequential. This essentially swaps the entry after the given index with the target entry.</span><pre>admin_incrementIndex</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_admin_index" title="admin_index :: The admin index action lists information about all articles. This allows the admin to add, edit, or delete
+entries.">
+            <span class="description">The admin index action lists information about all articles. This allows the admin to add, edit, or delete
+entries.</span><pre>admin_index</pre>
         </a>
     </li>
 
@@ -170,6 +164,12 @@ indexes are sequential. This essentially swaps the entry before the given index 
 `admin` flag for admin checking.">
             <span class="description">Set global flags and variables for views. This includes the &#039;pages&#039; variable for the menu generation and the
 `admin` flag for admin checking.</span><pre>beforeFilter</pre>
+        </a>
+    </li>
+
+                                                                                                        <li class="method public">
+        <a href="#method_index" title="index :: The default index simply redirects to the page&#039;s homepage action.">
+            <span class="description">The default index simply redirects to the page&#039;s homepage action.</span><pre>index</pre>
         </a>
     </li>
 
@@ -182,14 +182,14 @@ an included component in the given controller.</span><pre>isAuthorized</pre>
     </li>
 
                                                                                                         <li class="method public inherited">
-        <a href="#method_sendEmail" title="sendEmail :: Send an email message to a user. No effect is made if email is disabled.">
-            <span class="description">Send an email message to a user. No effect is made if email is disabled.</span><pre>sendEmail</pre>
+        <a href="#method_sendBatchEmail" title="sendBatchEmail :: Send an email to a group of given users. No effect is made if email is disabled.">
+            <span class="description">Send an email to a group of given users. No effect is made if email is disabled.</span><pre>sendBatchEmail</pre>
         </a>
     </li>
 
                                                                                                         <li class="method public inherited">
-        <a href="#method_sendBatchEmail" title="sendBatchEmail :: Send an email to a group of given users. No effect is made if email is disabled.">
-            <span class="description">Send an email to a group of given users. No effect is made if email is disabled.</span><pre>sendBatchEmail</pre>
+        <a href="#method_sendEmail" title="sendEmail :: Send an email message to a user. No effect is made if email is disabled.">
+            <span class="description">Send an email message to a user. No effect is made if email is disabled.</span><pre>sendEmail</pre>
         </a>
     </li>
 
@@ -266,7 +266,7 @@ an included component in the given controller.</span><pre>isAuthorized</pre>
                                         version
                                                                             </th>
                                     <td>
-                                                                                    2.0.2
+                                                                                    2.0.5
                                                                                 
                                     </td>
                                 </tr>
@@ -282,13 +282,194 @@ an included component in the given controller.</span><pre>isAuthorized</pre>
                                                                                                                                                                                 </table>
 
                     <h3><i class="icon-custom icon-method"></i> Methods</h3>
-                                                                <a id="method_admin_index"></a>
+                                                                <a id="method_admin_add"></a>
+                        <div class="element clickable method public  method_admin_add" data-toggle="collapse" data-target=".method_admin_add .collapse">
+                            <h2>The admin add action. This will allow the admin to create a new entry.</h2>
+                            <pre>admin_add() : null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>null</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_admin_decrementIndex"></a>
+                        <div class="element clickable method public  method_admin_decrementIndex" data-toggle="collapse" data-target=".method_admin_decrementIndex .collapse">
+                            <h2>Decrement the index of the given article ID. This assumes the database is in a consistent state and that all
+indexes are sequential. This essentially swaps the entry before the given index with the target entry.</h2>
+                            <pre>admin_decrementIndex(integer $id = null) : null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Thrown if an entry with the given ID is not found.</p>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Thrown if a GET request is made.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$id</h4>
+                                                <code>integer</code><p><p>The entry ID to decrement the index of.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>null</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_admin_delete"></a>
+                        <div class="element clickable method public  method_admin_delete" data-toggle="collapse" data-target=".method_admin_delete .collapse">
+                            <h2>The admin delete action. This allows the admin to delete an existing entry.</h2>
+                            <pre>admin_delete(integer $id = null) : null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Thrown if a GET request is made.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$id</h4>
+                                                <code>integer</code><p><p>The ID of the entry to delete.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>null</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_admin_edit"></a>
+                        <div class="element clickable method public  method_admin_edit" data-toggle="collapse" data-target=".method_admin_edit .collapse">
+                            <h2>The admin edit action. This allows the admin to edit an existing entry.</h2>
+                            <pre>admin_edit(integer $id = null) : null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Thrown if an entry with the given ID is not found.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$id</h4>
+                                                <code>integer</code><p><p>The ID of the entry to edit.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>null</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_admin_incrementIndex"></a>
+                        <div class="element clickable method public  method_admin_incrementIndex" data-toggle="collapse" data-target=".method_admin_incrementIndex .collapse">
+                            <h2>Increment the index of the given article ID. This assumes the database is in a consistent state and that all
+indexes are sequential. This essentially swaps the entry after the given index with the target entry.</h2>
+                            <pre>admin_incrementIndex(integer $id = null) : null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Thrown if an entry with the given ID is not found.</p>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Thrown if a GET request is made.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$id</h4>
+                                                <code>integer</code><p><p>The entry ID to increment the index of.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>null</code><p></p>
+                                                                    </div>
+                            </div>
+
+                        </div>
+                                            <a id="method_admin_index"></a>
                         <div class="element clickable method public  method_admin_index" data-toggle="collapse" data-target=".method_admin_index .collapse">
                             <h2>The admin index action lists information about all articles. This allows the admin to add, edit, or delete
 entries.</h2>
                             <pre>admin_index() : null</pre>
                             <div class="labels">
                                                                                                                                                                                             </div>
+
+                            
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
@@ -308,196 +489,7 @@ entries.</h2>
                                         <code>null</code><p></p>
                                                                     </div>
                             </div>
-                        </div>
-                                            <a id="method_admin_add"></a>
-                        <div class="element clickable method public  method_admin_add" data-toggle="collapse" data-target=".method_admin_add .collapse">
-                            <h2>The admin add action. This will allow the admin to create a new entry.</h2>
-                            <pre>admin_add() : null</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>null</code><p></p>
-                                                                    </div>
-                            </div>
-                        </div>
-                                            <a id="method_admin_incrementIndex"></a>
-                        <div class="element clickable method public  method_admin_incrementIndex" data-toggle="collapse" data-target=".method_admin_incrementIndex .collapse">
-                            <h2>Increment the index of the given article ID. This assumes the database is in a consistent state and that all
-indexes are sequential. This essentially swaps the entry after the given index with the target entry.</h2>
-                            <pre>admin_incrementIndex(int $id = null) : null</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    throws
-                                                </th>
-                                                <td>
-                                                                                                                                                                        
-                                                                                                                                                                        <p>Thrown if an entry with the given ID is not found.</p>
-                                                                                                                                                                        
-                                                                                                                                                                        <p>Thrown if a GET request is made.</p>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$id</h4>
-                                                <code>int</code><p><p>The entry ID to increment the index of.</p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>null</code><p></p>
-                                                                    </div>
-                            </div>
-                        </div>
-                                            <a id="method_admin_decrementIndex"></a>
-                        <div class="element clickable method public  method_admin_decrementIndex" data-toggle="collapse" data-target=".method_admin_decrementIndex .collapse">
-                            <h2>Decrement the index of the given article ID. This assumes the database is in a consistent state and that all
-indexes are sequential. This essentially swaps the entry before the given index with the target entry.</h2>
-                            <pre>admin_decrementIndex(int $id = null) : null</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    throws
-                                                </th>
-                                                <td>
-                                                                                                                                                                        
-                                                                                                                                                                        <p>Thrown if an entry with the given ID is not found.</p>
-                                                                                                                                                                        
-                                                                                                                                                                        <p>Thrown if a GET request is made.</p>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$id</h4>
-                                                <code>int</code><p><p>The entry ID to decrement the index of.</p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>null</code><p></p>
-                                                                    </div>
-                            </div>
-                        </div>
-                                            <a id="method_admin_edit"></a>
-                        <div class="element clickable method public  method_admin_edit" data-toggle="collapse" data-target=".method_admin_edit .collapse">
-                            <h2>The admin edit action. This allows the admin to edit an existing entry.</h2>
-                            <pre>admin_edit(int $id = null) : null</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    throws
-                                                </th>
-                                                <td>
-                                                                                                                                                                        
-                                                                                                                                                                        <p>Thrown if an entry with the given ID is not found.</p>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$id</h4>
-                                                <code>int</code><p><p>The ID of the entry to edit.</p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>null</code><p></p>
-                                                                    </div>
-                            </div>
-                        </div>
-                                            <a id="method_admin_delete"></a>
-                        <div class="element clickable method public  method_admin_delete" data-toggle="collapse" data-target=".method_admin_delete .collapse">
-                            <h2>The admin delete action. This allows the admin to delete an existing entry.</h2>
-                            <pre>admin_delete(int $id = null) : null</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    throws
-                                                </th>
-                                                <td>
-                                                                                                                                                                        
-                                                                                                                                                                        <p>Thrown if a GET request is made.</p>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$id</h4>
-                                                <code>int</code><p><p>The ID of the entry to delete.</p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>null</code><p></p>
-                                                                    </div>
-                            </div>
-                        </div>
-                                            <a id="method_index"></a>
-                        <div class="element clickable method public  method_index" data-toggle="collapse" data-target=".method_index .collapse">
-                            <h2>The default index simply redirects to the page&#039;s homepage action.</h2>
-                            <pre>index() : null</pre>
-                            <div class="labels">
-                                                                                                                                                                                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
-
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    
-                                                </th>
-                                                <td>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                    
-                                                                            <h3>Response</h3>
-                                        <code>null</code><p></p>
-                                                                    </div>
-                            </div>
                         </div>
                                             <a id="method_beforeFilter"></a>
                         <div class="element clickable method public  method_beforeFilter inherited" data-toggle="collapse" data-target=".method_beforeFilter .collapse">
@@ -506,6 +498,8 @@ indexes are sequential. This essentially swaps the entry before the given index 
                             <pre>beforeFilter() : null</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
@@ -525,14 +519,46 @@ indexes are sequential. This essentially swaps the entry before the given index 
                                         <code>null</code><p></p>
                                                                     </div>
                             </div>
+
+                        </div>
+                                            <a id="method_index"></a>
+                        <div class="element clickable method public  method_index" data-toggle="collapse" data-target=".method_index .collapse">
+                            <h2>The default index simply redirects to the page&#039;s homepage action.</h2>
+                            <pre>index() : null</pre>
+                            <div class="labels">
+                                                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    
+                                                </th>
+                                                <td>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                    
+                                                                            <h3>Response</h3>
+                                        <code>null</code><p></p>
+                                                                    </div>
+                            </div>
+
                         </div>
                                             <a id="method_isAuthorized"></a>
                         <div class="element clickable method public  method_isAuthorized inherited" data-toggle="collapse" data-target=".method_isAuthorized .collapse">
                             <h2>The global authorization method. This will be automatically called and used if the authorize controller is an
 an included component in the given controller.</h2>
-                            <pre>isAuthorized() : bool</pre>
+                            <pre>isAuthorized() : boolean</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
@@ -549,50 +575,10 @@ an included component in the given controller.</h2>
 
                                     
                                                                             <h3>Response</h3>
-                                        <code>bool</code><p><p>Returns if the user is authorized.</p></p>
+                                        <code>boolean</code><p><p>Returns if the user is authorized.</p></p>
                                                                     </div>
                             </div>
-                        </div>
-                                            <a id="method_sendEmail"></a>
-                        <div class="element clickable method public  method_sendEmail inherited" data-toggle="collapse" data-target=".method_sendEmail .collapse">
-                            <h2>Send an email message to a user. No effect is made if email is disabled.</h2>
-                            <pre>sendEmail(int $id = null, string $subject = &#039;&#039;, string $message = &#039;&#039;) : null</pre>
-                            <div class="labels">
-                                <span class="label">inherited</span>                                                                                                                                                            </div>
-                            <div class="row collapse">
-                                <div class="detail-description">
-                                    <div class="long_description"></div>
 
-                                    <table class="table">
-                                                                                    <tr>
-                                                <th>
-                                                    throws
-                                                </th>
-                                                <td>
-                                                                                                                                                                        
-                                                                                                                                                                        <p>Thrown if an invalid user ID is given.</p>
-                                                                                                    </td>
-                                            </tr>
-                                                                            </table>
-
-                                                                            <h3>Arguments</h3>
-                                                                                    <div class="subelement argument">
-                                                <h4>$id</h4>
-                                                <code>int</code><p><p>The user ID to send the message email to.</p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$subject</h4>
-                                                <code>string</code><p><p>The message subject.</p></p>
-                                            </div>
-                                                                                    <div class="subelement argument">
-                                                <h4>$message</h4>
-                                                <code>string</code><p><p>The message text.</p></p>
-                                            </div>
-                                                                            
-                                                                            <h3>Response</h3>
-                                        <code>null</code><p></p>
-                                                                    </div>
-                            </div>
                         </div>
                                             <a id="method_sendBatchEmail"></a>
                         <div class="element clickable method public  method_sendBatchEmail inherited" data-toggle="collapse" data-target=".method_sendBatchEmail .collapse">
@@ -600,6 +586,8 @@ an included component in the given controller.</h2>
                             <pre>sendBatchEmail(array $bcc = array(), string $subject = &#039;&#039;, string $message = &#039;&#039;) : null</pre>
                             <div class="labels">
                                 <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
                             <div class="row collapse">
                                 <div class="detail-description">
                                     <div class="long_description"></div>
@@ -625,6 +613,51 @@ an included component in the given controller.</h2>
                                         <code>null</code><p></p>
                                                                     </div>
                             </div>
+
+                        </div>
+                                            <a id="method_sendEmail"></a>
+                        <div class="element clickable method public  method_sendEmail inherited" data-toggle="collapse" data-target=".method_sendEmail .collapse">
+                            <h2>Send an email message to a user. No effect is made if email is disabled.</h2>
+                            <pre>sendEmail(integer $id = null, string $subject = &#039;&#039;, string $message = &#039;&#039;) : null</pre>
+                            <div class="labels">
+                                <span class="label">inherited</span>                                                                                                                                                            </div>
+
+                            
+                            <div class="row collapse">
+                                <div class="detail-description">
+                                    <div class="long_description"></div>
+
+                                    <table class="table">
+                                                                                    <tr>
+                                                <th>
+                                                    throws
+                                                </th>
+                                                <td>
+                                                                                                                                                                        
+                                                                                                                                                                        <p>Thrown if an invalid user ID is given.</p>
+                                                                                                    </td>
+                                            </tr>
+                                                                            </table>
+
+                                                                            <h3>Arguments</h3>
+                                                                                    <div class="subelement argument">
+                                                <h4>$id</h4>
+                                                <code>integer</code><p><p>The user ID to send the message email to.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$subject</h4>
+                                                <code>string</code><p><p>The message subject.</p></p>
+                                            </div>
+                                                                                    <div class="subelement argument">
+                                                <h4>$message</h4>
+                                                <code>string</code><p><p>The message text.</p></p>
+                                            </div>
+                                                                            
+                                                                            <h3>Response</h3>
+                                        <code>null</code><p></p>
+                                                                    </div>
+                            </div>
+
                         </div>
                     
                     
@@ -727,7 +760,7 @@ an included component in the given controller.</h2>
             Template is built using <a href="http://twitter.github.com/bootstrap/">Twitter Bootstrap 2</a> and icons provided by
             <a href="http://glyphicons.com/">Glyphicons</a>.<br/>
             Documentation is powered by <a href="http://www.phpdoc.org/">phpDocumentor </a> and<br/>
-            generated on Fri, 08 Aug 2014 10:46:31 -0400.<br/>
+            generated on Thu, 18 Dec 2014 09:44:04 -0500.<br/>
     </footer>
     </body>
 </html>
