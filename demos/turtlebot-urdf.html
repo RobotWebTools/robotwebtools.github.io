@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <script src="http://cdn.robotwebtools.org/threejs/current/three.min.js"></script>
-<script src="http://cdn.robotwebtools.org/ColladaAnimationCompress/0.0.1/ColladaLoader2.min.js"></script>
+<script src="http://cdn.robotwebtools.org/threejs/current/ColladaLoader.min.js"></script>
 <script src="http://cdn.robotwebtools.org/EventEmitter2/current/eventemitter2.min.js"></script>
 <script src="http://cdn.robotwebtools.org/roslibjs/current/roslib.min.js"></script>
 <script src="http://cdn.robotwebtools.org/ros3djs/current/ros3d.min.js"></script>
@@ -25,7 +25,7 @@
 <script>
   function init() {
     var ros = new ROSLIB.Ros({
-      url : 'ws://demo.robotwebtools.org:9090'
+      url : 'ws://demo.robotwebtools.org:8888'
     });
 
     var viewer = new ROS3D.Viewer({
@@ -43,10 +43,12 @@
         ros : ros,
         angularThres : 0.01,
         transThres : 0.01,
-        rate : 10.0
+        rate : 10.0,
+        fixedFrame: '/base_footprint'
       }),
       path : 'http://resources.robotwebtools.org/',
-      rootObject : viewer.scene
+      rootObject : viewer.scene,
+      loader : ROS3D.COLLADA_LOADER
     });
   }
 </script>
