@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: urdf/UrdfCylinder.js</title>
+    <title>JSDoc: Source: util/decompressPng.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: urdf/UrdfCylinder.js</h1>
+    <h1 class="page-title">Source: util/decompressPng.js</h1>
 
     
 
@@ -27,27 +27,38 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * @fileOverview 
- * @author Benjamin Pitzer - ben.pitzer@gmail.com
- * @author Russell Toris - rctoris@wpi.edu
+ * @fileOverview
+ * @author Ramon Wijnands - rayman747@hotmail.com
  */
 
-var UrdfTypes = require('./UrdfTypes');
+'use strict';
+
+var pngparse = require('pngparse');
 
 /**
- * A Cylinder element in a URDF.
+ * If a message was compressed as a PNG image (a compression hack since
+ * gzipping over WebSockets * is not supported yet), this function decodes
+ * the "image" as a Base64 string.
  *
- * @constructor
- * @param options - object with following keys:
- *  * xml - the XML element to parse
+ * @private
+ * @param data - object containing the PNG data.
+ * @param callback - function with params:
+ *   * data - the uncompressed data
  */
-function UrdfCylinder(options) {
-  this.type = UrdfTypes.URDF_CYLINDER;
-  this.length = parseFloat(options.xml.getAttribute('length'));
-  this.radius = parseFloat(options.xml.getAttribute('radius'));
+function decompressPng(data, callback) {
+  var buffer = new Buffer(data, 'base64');
+
+  pngparse.parse(buffer, function(err, data) {
+    if(err) {
+      console.warn('Cannot process PNG encoded message ');
+    } else {
+      var jsonData = data.data.toString();
+      callback(JSON.parse(jsonData));
+    }
+  });
 }
 
-module.exports = UrdfCylinder;</code></pre>
+module.exports = decompressPng;</code></pre>
         </article>
     </section>
 
