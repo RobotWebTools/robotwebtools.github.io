@@ -3,6 +3,9 @@
  * Github widget styles 
  * ------------------------------------------------------------------
  */
+/*
+ * Modified by Jihoon Lee to use in RWT
+ */
 .gh-profile-card {
   /* followers number */
   /* List of repositories */ }
@@ -25,7 +28,10 @@
     display: block;
     font-size: 1.2em;
     font-weight: bold;
+    text-align: left;
     color: #222; }
+  .gh-profile-card .company{
+    text-align: left; }
   .gh-profile-card .error {
     font-size: 0.8em;
     color: #444;

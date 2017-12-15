@@ -31,31 +31,11 @@ var GitHubApiLoader = (function () {
         var _this = this;
         var request = this.apiGet(this.apiBase + "/users/" + username);
         request.success(function (profile) {
-            _this.apiGet(profile.repos_url)
-                .success(function (repositories) {
-                callback({ profile: profile, repositories: repositories }, null);
-            });
+            callback({ profile: profile }, null);
         });
         request.error(function (result, request) {
             var error = _this.identifyError(result, request);
             callback(null, error);
-        });
-    };
-    GitHubApiLoader.prototype.loadRepositoriesLanguages = function (repositories, callback) {
-        var _this = this;
-        var languagesUrls = this.extractLangURLs(repositories);
-        var langStats = [];
-        var requestsAmount = languagesUrls.length;
-        languagesUrls
-            .forEach(function (repoLangUrl) {
-            var request = _this.apiGet(repoLangUrl);
-            request.error(function (request) { return requestsAmount--; });
-            request.success(function (repoLangs) {
-                langStats.push(repoLangs);
-                if (langStats.length === requestsAmount) {
-                    callback(langStats);
-                }
-            });
         });
     };
     GitHubApiLoader.prototype.identifyError = function (result, request) {
@@ -73,9 +53,6 @@ var GitHubApiLoader = (function () {
             error.message = error.message.split('(')[0];
         }
         return error;
-    };
-    GitHubApiLoader.prototype.extractLangURLs = function (profileRepositories) {
-        return profileRepositories.map(function (repository) { return repository.languages_url; });
     };
     GitHubApiLoader.prototype.apiGet = function (url) {
         var request = this.buildRequest(url);
@@ -239,28 +216,6 @@ var DOMOperator = (function () {
             .map(function (lang) { return "<li>" + lang.name + "</li>"; })
             .reduce(function (list, nextElement) { return list + nextElement; });
     };
-    DOMOperator.createRepositoriesHeader = function (headerText) {
-        var $repositoriesHeader = document.createElement('span');
-        $repositoriesHeader.className = 'header';
-        $repositoriesHeader.appendChild(document.createTextNode("" + headerText));
-        return $repositoriesHeader;
-    };
-    DOMOperator.createRepositoriesList = function (repositories, maxRepos) {
-        var $reposList = document.createElement('div');
-        $reposList.className = 'repos';
-        repositories.slice(0, maxRepos)
-            .map(this.createRepositoryElement)
-            .forEach(function (el) { return $reposList.appendChild(el); });
-        return $reposList;
-    };
-    DOMOperator.createRepositoryElement = function (repository) {
-        var updated = new Date(repository.updated_at);
-        var $repoLink = document.createElement('a');
-        $repoLink.href = repository.html_url;
-        $repoLink.title = repository.description;
-        $repoLink.innerHTML = "\n                <span class=\"repo-name\"> " + repository.name + " </span>\n                <span class=\"updated\">Updated: " + updated.toLocaleDateString() + " </span>\n                <span class=\"star\"> " + repository.stargazers_count + " </span>\n            ";
-        return $repoLink;
-    };
     return DOMOperator;
 }());
 
@@ -302,7 +257,7 @@ var GitHubCardWidget = (function () {
         if (!$template) {
             throw "No template found for selector: " + templateCssSelector;
         }
-        $template.className = 'gh-profile-card';
+        $template.className += ' gh-profile-card';
         return $template;
     };
     GitHubCardWidget.prototype.extractHtmlConfig = function (widgetConfig, $template) {
@@ -326,22 +281,12 @@ var GitHubCardWidget = (function () {
         // API doesn't return errors, try to built widget
         var $profile = DOMOperator.createProfile(this.userData.profile);
         // $profile.appendChild(this.createAdditionalInformation(this.userData.profile));
-        // $profile.appendChild(this.createTopLanguagesSection(repositories));
         $root.appendChild($profile);
     };
     GitHubCardWidget.prototype.createAdditionalInformation= function (profile) {
         var _this = this;
         var $addition = DOMOperator.createAdditionalInformation(profile);
         return $addition;
-    };
-    GitHubCardWidget.prototype.createTopLanguagesSection = function (repositories) {
-        var _this = this;
-        var $topLanguages = DOMOperator.createTopLanguagesSection();
-        this.apiLoader.loadRepositoriesLanguages(repositories.slice(0, 10), function (langStats) {
-            var languagesRank = _this.groupLanguagesUsage(langStats);
-            $topLanguages.innerHTML = DOMOperator.createTopLanguagesList(languagesRank);
-        });
-        return $topLanguages;
     };
     GitHubCardWidget.prototype.groupLanguagesUsage = function (langStats) {
         var languagesRank = {};
@@ -353,18 +298,6 @@ var GitHubCardWidget = (function () {
         });
         return languagesRank;
     };
-    GitHubCardWidget.prototype.sortRepositories = function (repos, sortyBy) {
-        var _this = this;
-        repos.sort(function (firstRepo, secondRepo) {
-            if (sortyBy === 'stars') {
-                var starDifference = secondRepo.stargazers_count - firstRepo.stargazers_count;
-                if (starDifference !== 0) {
-                    return starDifference;
-                }
-            }
-            return _this.dateDifference(secondRepo.updated_at, firstRepo.updated_at);
-        });
-    };
     GitHubCardWidget.prototype.dateDifference = function (first, second) {
         return new Date(first).getTime() - new Date(second).getTime();
     };
@@ -373,9 +306,12 @@ var GitHubCardWidget = (function () {
 
 window.GitHubCard = GitHubCardWidget;
 document.addEventListener('DOMContentLoaded', function () {
-    var $defaultTemplate = document.querySelector('#github-card');
-    if ($defaultTemplate) {
-        var widget = new GitHubCardWidget();
+    var $defaultTemplate = document.getElementsByClassName('github-card');
+    for(var i = 0; i < $defaultTemplate.length; i++) {
+        var id = '#' + $defaultTemplate[i].id;
+        var widget = new GitHubCardWidget({
+          template: id
+        });
         widget.init();
     }
 });
