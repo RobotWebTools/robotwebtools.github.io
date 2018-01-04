@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: sensors/PointCloud2.js</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: sensors/PointCloud2.js</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * @author David V. Lu!! - davidvlu@gmail.com
+ */
+
+function read_point(msg, index, data_view){
+    var pt = [];
+    var base = msg.point_step * index;
+    var n = 4;
+    for(var fi=0; fi&lt;msg.fields.length; fi++){
+        var si = base + msg.fields[fi].offset;
+
+        if( msg.fields[fi].name === 'rgb' ){
+            pt[ 'rgb' ] = data_view.getInt32(si, 1);
+        }else{
+            pt[ msg.fields[fi].name ] = data_view.getFloat32(si, 1);
+        }
+    }
+    return pt;
+}
+
+var BASE64 = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';
+function decode64(x) {
+    var a = [], z = 0, bits = 0;
+
+    for (var i = 0, len = x.length; i &lt; len; i++) {
+      z += BASE64.indexOf( x[i] );
+      bits += 6;
+      if(bits>=8){
+          bits -= 8;
+          a.push(z >> bits);
+          z = z &amp; (Math.pow(2, bits)-1);
+      }
+      z = z &lt;&lt; 6;
+    }
+    return a;
+}
+
+/**
+ * A PointCloud2 client that listens to a given topic and displays the points.
+ *
+ * @constructor
+ * @param options - object with following keys:
+ *
+ *  * ros - the ROSLIB.Ros connection handle
+ *  * topic - the marker topic to listen to
+ *  * tfClient - the TF client handle to use
+ *  * texture - (optional) Image url for a texture to use for the points. Defaults to a single white pixel.
+ *  * rootObject (optional) - the root object to add this marker to
+ *  * size (optional) - size to draw each point (default 0.05)
+ *  * max_pts (optional) - number of points to draw (default 100)
+ *  * color (optional) - point color (otherwise taken from the topic)
+ */
+ROS3D.PointCloud2 = function(options) {
+  options = options || {};
+  this.ros = options.ros;
+  this.topicName = options.topic || '/points';
+  this.color = options.color;
+
+  this.particles = new ROS3D.Particles(options);
+  this.rosTopic = undefined;
+  this.subscribe();
+};
+ROS3D.PointCloud2.prototype.__proto__ = THREE.Object3D.prototype;
+
+
+ROS3D.PointCloud2.prototype.unsubscribe = function(){
+  if(this.rosTopic){
+    this.rosTopic.unsubscribe();
+  }
+};
+
+ROS3D.PointCloud2.prototype.subscribe = function(){
+  this.unsubscribe();
+
+  // subscribe to the topic
+  this.rosTopic = new ROSLIB.Topic({
+    ros : this.ros,
+    name : this.topicName,
+    messageType : 'sensor_msgs/PointCloud2'
+  });
+  this.rosTopic.subscribe(this.processMessage.bind(this));
+};
+
+ROS3D.PointCloud2.prototype.processMessage = function(message){
+  setFrame(this.particles, message.header.frame_id);
+
+  var n = message.height*message.width;
+  var buffer;
+  if(message.data.buffer){
+    buffer = message.data.buffer.buffer;
+  }else{
+    buffer = Uint8Array.from(decode64(message.data)).buffer;
+  }
+  var dv = new DataView(buffer);
+  var color;
+  if(this.color !== undefined){
+    color = new THREE.Color(this.color);
+  }
+  for(var i=0;i&lt;n;i++){
+    var pt = read_point(message, i, dv);
+    this.particles.points[i] = new THREE.Vector3( pt['x'], pt['y'], pt['z'] );
+    this.particles.colors[ i ] = color || new THREE.Color( pt['rgb'] );
+    this.particles.alpha[i] = 1.0;
+  }
+
+  finishedUpdate(this.particles, n);
+};
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="ROS3D.Arrow.html">Arrow</a></li><li><a href="ROS3D.Arrow2.html">Arrow2</a></li><li><a href="ROS3D.Axes.html">Axes</a></li><li><a href="ROS3D.DepthCloud.html">DepthCloud</a></li><li><a href="ROS3D.Grid.html">Grid</a></li><li><a href="ROS3D.Highlighter.html">Highlighter</a></li><li><a href="ROS3D.InteractiveMarker.html">InteractiveMarker</a></li><li><a href="ROS3D.InteractiveMarkerClient.html">InteractiveMarkerClient</a></li><li><a href="ROS3D.InteractiveMarkerControl.html">InteractiveMarkerControl</a></li><li><a href="ROS3D.InteractiveMarkerHandle.html">InteractiveMarkerHandle</a></li><li><a href="ROS3D.InteractiveMarkerMenu.html">InteractiveMarkerMenu</a></li><li><a href="ROS3D.LaserScan.html">LaserScan</a></li><li><a href="ROS3D.Marker.html">Marker</a></li><li><a href="ROS3D.MarkerArrayClient.html">MarkerArrayClient</a></li><li><a href="ROS3D.MarkerClient.html">MarkerClient</a></li><li><a href="ROS3D.MeshResource.html">MeshResource</a></li><li><a href="ROS3D.MouseHandler.html">MouseHandler</a></li><li><a href="ROS3D.OccupancyGrid.html">OccupancyGrid</a></li><li><a href="ROS3D.OccupancyGridClient.html">OccupancyGridClient</a></li><li><a href="ROS3D.Odometry.html">Odometry</a></li><li><a href="ROS3D.OrbitControls.html">OrbitControls</a></li><li><a href="ROS3D.Particles.html">Particles</a></li><li><a href="ROS3D.Path.html">Path</a></li><li><a href="ROS3D.Point.html">Point</a></li><li><a href="ROS3D.PointCloud2.html">PointCloud2</a></li><li><a href="ROS3D.Polygon.html">Polygon</a></li><li><a href="ROS3D.Pose.html">Pose</a></li><li><a href="ROS3D.PoseArray.html">PoseArray</a></li><li><a href="ROS3D.PoseWithCovariance.html">PoseWithCovariance</a></li><li><a href="ROS3D.SceneNode.html">SceneNode</a></li><li><a href="ROS3D.TriangleList.html">TriangleList</a></li><li><a href="ROS3D.Urdf.html">Urdf</a></li><li><a href="ROS3D.UrdfClient.html">UrdfClient</a></li><li><a href="ROS3D.Viewer.html">Viewer</a></li></ul><h3>Global</h3><ul><li><a href="global.html#read_point">read_point</a></li><li><a href="global.html#ROS3D">ROS3D</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.5.5</a> on Thu Jan 04 2018 07:34:29 GMT+0000 (UTC)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
