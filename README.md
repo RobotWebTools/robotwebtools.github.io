@@ -1,6 +1,6 @@
-# robotwebtools.github.io / robotwebtools.org
+# robotwebtools.github.io
 
-This is the repository for [RobotWebTools.org](http://robotwebtools.org) - a collection of open-source modules and tools for building web-based robot apps. Theme based on [ZeroFour](http://html5up.net/zerofour/).
+This is the repository for [RobotWebTools](https://robotwebtools.github.io) - a collection of open-source modules and tools for building web-based robot apps.
 
 Please send pull requests containing your edits, style updates, and any tools you'd like listed.
 
